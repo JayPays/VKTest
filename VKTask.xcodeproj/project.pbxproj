@@ -7,14 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		691603D41D27A84C00F1509B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 691603D31D27A84C00F1509B /* main.m */; };
-		691603D71D27A84C00F1509B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 691603D61D27A84C00F1509B /* AppDelegate.m */; };
-		691603DA1D27A84C00F1509B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 691603D91D27A84C00F1509B /* ViewController.m */; };
-		691603DD1D27A84C00F1509B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691603DB1D27A84C00F1509B /* Main.storyboard */; };
-		691603DF1D27A84C00F1509B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 691603DE1D27A84C00F1509B /* Assets.xcassets */; };
-		691603E21D27A84C00F1509B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691603E01D27A84C00F1509B /* LaunchScreen.storyboard */; };
-		691603ED1D27A84C00F1509B /* VKTaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 691603EC1D27A84C00F1509B /* VKTaskTests.m */; };
-		691603F81D27A84C00F1509B /* VKTaskUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 691603F71D27A84C00F1509B /* VKTaskUITests.m */; };
+		5AAE038C1D2A3DB000CC94C5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 698E21F31D27A9AF003CE1C7 /* Default-568h@2x.png */; };
+		5AAE038E1D2A3E4F00CC94C5 /* placeholder-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AAE038D1D2A3E4F00CC94C5 /* placeholder-hi.png */; };
+		5AAE03B31D2A7CAD00CC94C5 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE03B11D2A7CAD00CC94C5 /* CustomTableViewCell.m */; };
+		5AAE03B41D2A7CAD00CC94C5 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAE03B21D2A7CAD00CC94C5 /* CustomTableViewCell.xib */; };
+		5AAE03DE1D2A7EC300CC94C5 /* Album+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE03D71D2A7EC300CC94C5 /* Album+CoreDataProperties.m */; };
+		5AAE03DF1D2A7EC300CC94C5 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE03D91D2A7EC300CC94C5 /* Album.m */; };
+		5AAE03E01D2A7EC300CC94C5 /* Photo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE03DB1D2A7EC300CC94C5 /* Photo+CoreDataProperties.m */; };
+		5AAE03E11D2A7EC300CC94C5 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE03DD1D2A7EC300CC94C5 /* Photo.m */; };
+		5AAE03E41D2A7EE000CC94C5 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE03E31D2A7EE000CC94C5 /* User+CoreDataProperties.m */; };
+		5AAE03E71D2A8ADE00CC94C5 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE03E61D2A8ADE00CC94C5 /* PhotosViewController.m */; };
+		6984A9711D2CB96600487ED5 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6984A96F1D2CB96600487ED5 /* CustomCollectionViewCell.m */; };
+		6984A9721D2CB96600487ED5 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6984A9701D2CB96600487ED5 /* CustomCollectionViewCell.xib */; };
+		698E21EC1D27A94A003CE1C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E21E01D27A94A003CE1C7 /* AppDelegate.m */; };
+		698E22031D27AA95003CE1C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E22021D27AA95003CE1C7 /* main.m */; };
+		698E22071D27AACD003CE1C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 698E22061D27AACD003CE1C7 /* Assets.xcassets */; };
+		698E220D1D27B239003CE1C7 /* AlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E220C1D27B239003CE1C7 /* AlbumsViewController.m */; };
+		698E22111D27B405003CE1C7 /* dataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 698E220F1D27B405003CE1C7 /* dataBase.xcdatamodeld */; };
+		698E22211D27B53C003CE1C7 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E22171D27B53C003CE1C7 /* User.m */; };
+		698E226C1D27CAA8003CE1C7 /* VKRequastTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E226B1D27CAA8003CE1C7 /* VKRequastTask.m */; };
+		69C4D89E1D2CAE39002CE66A /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C4D89D1D2CAE39002CE66A /* GalleryViewController.m */; };
+		69C4D8A01D2CAF3C002CE66A /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C4D89F1D2CAF3C002CE66A /* close.png */; };
+		69C4D8A31D2CB142002CE66A /* GalleryContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C4D8A21D2CB142002CE66A /* GalleryContentViewController.m */; };
+		69C4D8A61D2CB80F002CE66A /* UIViewController+StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C4D8A51D2CB80F002CE66A /* UIViewController+StatusBar.m */; };
+		798D59351CABF84FCF76753D /* libPods-VKTask.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5856BC0517BC7E20C677F616 /* libPods-VKTask.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,22 +51,53 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A9126B5FB37F96F5BB30C31 /* Pods-VKTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKTask/Pods-VKTask.debug.xcconfig"; sourceTree = "<group>"; };
+		5856BC0517BC7E20C677F616 /* libPods-VKTask.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VKTask.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AAE038D1D2A3E4F00CC94C5 /* placeholder-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder-hi.png"; sourceTree = "<group>"; };
+		5AAE03B01D2A7CAD00CC94C5 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTableViewCell.h; path = Cells/CustomTableViewCell.h; sourceTree = "<group>"; };
+		5AAE03B11D2A7CAD00CC94C5 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTableViewCell.m; path = Cells/CustomTableViewCell.m; sourceTree = "<group>"; };
+		5AAE03B21D2A7CAD00CC94C5 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomTableViewCell.xib; path = Cells/CustomTableViewCell.xib; sourceTree = "<group>"; };
+		5AAE03D61D2A7EC300CC94C5 /* Album+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Album+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5AAE03D71D2A7EC300CC94C5 /* Album+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Album+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5AAE03D81D2A7EC300CC94C5 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		5AAE03D91D2A7EC300CC94C5 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		5AAE03DA1D2A7EC300CC94C5 /* Photo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5AAE03DB1D2A7EC300CC94C5 /* Photo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5AAE03DC1D2A7EC300CC94C5 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		5AAE03DD1D2A7EC300CC94C5 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		5AAE03E21D2A7EE000CC94C5 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5AAE03E31D2A7EE000CC94C5 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5AAE03E51D2A8ADE00CC94C5 /* PhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
+		5AAE03E61D2A8ADE00CC94C5 /* PhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
 		691603CF1D27A84C00F1509B /* VKTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		691603D31D27A84C00F1509B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		691603D51D27A84C00F1509B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		691603D61D27A84C00F1509B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		691603D81D27A84C00F1509B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		691603D91D27A84C00F1509B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		691603DC1D27A84C00F1509B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		691603DE1D27A84C00F1509B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		691603E11D27A84C00F1509B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		691603E31D27A84C00F1509B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		691603E81D27A84C00F1509B /* VKTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		691603EC1D27A84C00F1509B /* VKTaskTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKTaskTests.m; sourceTree = "<group>"; };
-		691603EE1D27A84C00F1509B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		691603F31D27A84C00F1509B /* VKTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		691603F71D27A84C00F1509B /* VKTaskUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKTaskUITests.m; sourceTree = "<group>"; };
-		691603F91D27A84C00F1509B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6984A96E1D2CB96600487ED5 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomCollectionViewCell.h; path = Cells/CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		6984A96F1D2CB96600487ED5 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomCollectionViewCell.m; path = Cells/CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		6984A9701D2CB96600487ED5 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomCollectionViewCell.xib; path = Cells/CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		698E21DF1D27A94A003CE1C7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		698E21E01D27A94A003CE1C7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		698E21EA1D27A94A003CE1C7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		698E21F31D27A9AF003CE1C7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
+		698E22021D27AA95003CE1C7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		698E22061D27AACD003CE1C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		698E220B1D27B239003CE1C7 /* AlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumsViewController.h; sourceTree = "<group>"; };
+		698E220C1D27B239003CE1C7 /* AlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumsViewController.m; sourceTree = "<group>"; };
+		698E22101D27B405003CE1C7 /* dataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dataBase.xcdatamodel; sourceTree = "<group>"; };
+		698E22161D27B53C003CE1C7 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		698E22171D27B53C003CE1C7 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		698E226A1D27CAA8003CE1C7 /* VKRequastTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKRequastTask.h; sourceTree = "<group>"; };
+		698E226B1D27CAA8003CE1C7 /* VKRequastTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKRequastTask.m; sourceTree = "<group>"; };
+		69C4D89C1D2CAE39002CE66A /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
+		69C4D89D1D2CAE39002CE66A /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
+		69C4D89F1D2CAF3C002CE66A /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		69C4D8A11D2CB142002CE66A /* GalleryContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryContentViewController.h; sourceTree = "<group>"; };
+		69C4D8A21D2CB142002CE66A /* GalleryContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryContentViewController.m; sourceTree = "<group>"; };
+		69C4D8A41D2CB80F002CE66A /* UIViewController+StatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+StatusBar.h"; sourceTree = "<group>"; };
+		69C4D8A51D2CB80F002CE66A /* UIViewController+StatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+StatusBar.m"; sourceTree = "<group>"; };
+		9296C05C2B6BC07EC7A23436 /* libPods-VKTaskUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VKTaskUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		956E071E33EE4ED6433A9F95 /* libPods-VKTaskTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VKTaskTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3B5BA0DB1CE5F21BCCEAB57 /* Pods-VKTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKTask/Pods-VKTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				798D59351CABF84FCF76753D /* libPods-VKTask.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +126,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AAE03861D2A3CA600CC94C5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5AAE03B01D2A7CAD00CC94C5 /* CustomTableViewCell.h */,
+				5AAE03B11D2A7CAD00CC94C5 /* CustomTableViewCell.m */,
+				5AAE03B21D2A7CAD00CC94C5 /* CustomTableViewCell.xib */,
+				6984A96E1D2CB96600487ED5 /* CustomCollectionViewCell.h */,
+				6984A96F1D2CB96600487ED5 /* CustomCollectionViewCell.m */,
+				6984A9701D2CB96600487ED5 /* CustomCollectionViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		5ABBD91D1D2A270200107A9E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				69C4D8A41D2CB80F002CE66A /* UIViewController+StatusBar.h */,
+				69C4D8A51D2CB80F002CE66A /* UIViewController+StatusBar.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		691603C61D27A84C00F1509B = {
 			isa = PBXGroup;
 			children = (
 				691603D11D27A84C00F1509B /* VKTask */,
-				691603EB1D27A84C00F1509B /* VKTaskTests */,
-				691603F61D27A84C00F1509B /* VKTaskUITests */,
 				691603D01D27A84C00F1509B /* Products */,
+				7FAA448F1B065A0EDD8BD2D3 /* Pods */,
+				B3D1EB792A42AF8B56E70B56 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,43 +171,108 @@
 		691603D11D27A84C00F1509B /* VKTask */ = {
 			isa = PBXGroup;
 			children = (
-				691603D51D27A84C00F1509B /* AppDelegate.h */,
-				691603D61D27A84C00F1509B /* AppDelegate.m */,
-				691603D81D27A84C00F1509B /* ViewController.h */,
-				691603D91D27A84C00F1509B /* ViewController.m */,
-				691603DB1D27A84C00F1509B /* Main.storyboard */,
-				691603DE1D27A84C00F1509B /* Assets.xcassets */,
-				691603E01D27A84C00F1509B /* LaunchScreen.storyboard */,
-				691603E31D27A84C00F1509B /* Info.plist */,
-				691603D21D27A84C00F1509B /* Supporting Files */,
+				5AAE03861D2A3CA600CC94C5 /* Cells */,
+				5ABBD91D1D2A270200107A9E /* Categories */,
+				698E22691D27CA94003CE1C7 /* Task */,
+				698E220E1D27B3F7003CE1C7 /* dataBase */,
+				698E21DE1D27A94A003CE1C7 /* app */,
+				698E21E11D27A94A003CE1C7 /* Controllers */,
+				698E21E41D27A94A003CE1C7 /* Resources */,
 			);
 			path = VKTask;
 			sourceTree = "<group>";
 		};
-		691603D21D27A84C00F1509B /* Supporting Files */ = {
+		698E21DE1D27A94A003CE1C7 /* app */ = {
 			isa = PBXGroup;
 			children = (
-				691603D31D27A84C00F1509B /* main.m */,
+				698E21DF1D27A94A003CE1C7 /* AppDelegate.h */,
+				698E21E01D27A94A003CE1C7 /* AppDelegate.m */,
 			);
-			name = "Supporting Files";
+			path = app;
 			sourceTree = "<group>";
 		};
-		691603EB1D27A84C00F1509B /* VKTaskTests */ = {
+		698E21E11D27A94A003CE1C7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				691603EC1D27A84C00F1509B /* VKTaskTests.m */,
-				691603EE1D27A84C00F1509B /* Info.plist */,
+				698E220B1D27B239003CE1C7 /* AlbumsViewController.h */,
+				698E220C1D27B239003CE1C7 /* AlbumsViewController.m */,
+				5AAE03E51D2A8ADE00CC94C5 /* PhotosViewController.h */,
+				5AAE03E61D2A8ADE00CC94C5 /* PhotosViewController.m */,
+				69C4D89C1D2CAE39002CE66A /* GalleryViewController.h */,
+				69C4D89D1D2CAE39002CE66A /* GalleryViewController.m */,
+				69C4D8A11D2CB142002CE66A /* GalleryContentViewController.h */,
+				69C4D8A21D2CB142002CE66A /* GalleryContentViewController.m */,
 			);
-			path = VKTaskTests;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		691603F61D27A84C00F1509B /* VKTaskUITests */ = {
+		698E21E41D27A94A003CE1C7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				691603F71D27A84C00F1509B /* VKTaskUITests.m */,
-				691603F91D27A84C00F1509B /* Info.plist */,
+				69C4D89F1D2CAF3C002CE66A /* close.png */,
+				5AAE038D1D2A3E4F00CC94C5 /* placeholder-hi.png */,
+				698E21F31D27A9AF003CE1C7 /* Default-568h@2x.png */,
+				698E22061D27AACD003CE1C7 /* Assets.xcassets */,
+				698E22021D27AA95003CE1C7 /* main.m */,
+				698E21EA1D27A94A003CE1C7 /* Info.plist */,
 			);
-			path = VKTaskUITests;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		698E220E1D27B3F7003CE1C7 /* dataBase */ = {
+			isa = PBXGroup;
+			children = (
+				698E22131D27B531003CE1C7 /* Managment */,
+				698E220F1D27B405003CE1C7 /* dataBase.xcdatamodeld */,
+			);
+			path = dataBase;
+			sourceTree = "<group>";
+		};
+		698E22131D27B531003CE1C7 /* Managment */ = {
+			isa = PBXGroup;
+			children = (
+				698E22161D27B53C003CE1C7 /* User.h */,
+				698E22171D27B53C003CE1C7 /* User.m */,
+				5AAE03E21D2A7EE000CC94C5 /* User+CoreDataProperties.h */,
+				5AAE03E31D2A7EE000CC94C5 /* User+CoreDataProperties.m */,
+				5AAE03D61D2A7EC300CC94C5 /* Album+CoreDataProperties.h */,
+				5AAE03D71D2A7EC300CC94C5 /* Album+CoreDataProperties.m */,
+				5AAE03D81D2A7EC300CC94C5 /* Album.h */,
+				5AAE03D91D2A7EC300CC94C5 /* Album.m */,
+				5AAE03DA1D2A7EC300CC94C5 /* Photo+CoreDataProperties.h */,
+				5AAE03DB1D2A7EC300CC94C5 /* Photo+CoreDataProperties.m */,
+				5AAE03DC1D2A7EC300CC94C5 /* Photo.h */,
+				5AAE03DD1D2A7EC300CC94C5 /* Photo.m */,
+			);
+			path = Managment;
+			sourceTree = "<group>";
+		};
+		698E22691D27CA94003CE1C7 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				698E226A1D27CAA8003CE1C7 /* VKRequastTask.h */,
+				698E226B1D27CAA8003CE1C7 /* VKRequastTask.m */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		7FAA448F1B065A0EDD8BD2D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A9126B5FB37F96F5BB30C31 /* Pods-VKTask.debug.xcconfig */,
+				B3B5BA0DB1CE5F21BCCEAB57 /* Pods-VKTask.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B3D1EB792A42AF8B56E70B56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5856BC0517BC7E20C677F616 /* libPods-VKTask.a */,
+				956E071E33EE4ED6433A9F95 /* libPods-VKTaskTests.a */,
+				9296C05C2B6BC07EC7A23436 /* libPods-VKTaskUITests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 691603FC1D27A84C00F1509B /* Build configuration list for PBXNativeTarget "VKTask" */;
 			buildPhases = (
+				4FDD210585B007570A1DC302 /* 📦 Check Pods Manifest.lock */,
 				691603CB1D27A84C00F1509B /* Sources */,
 				691603CC1D27A84C00F1509B /* Frameworks */,
 				691603CD1D27A84C00F1509B /* Resources */,
+				5F1A782AAE35FEF07CF16B2B /* 📦 Embed Pods Frameworks */,
+				9262EFB677EA098227FA5408 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,9 +381,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				691603E21D27A84C00F1509B /* LaunchScreen.storyboard in Resources */,
-				691603DF1D27A84C00F1509B /* Assets.xcassets in Resources */,
-				691603DD1D27A84C00F1509B /* Main.storyboard in Resources */,
+				69C4D8A01D2CAF3C002CE66A /* close.png in Resources */,
+				6984A9721D2CB96600487ED5 /* CustomCollectionViewCell.xib in Resources */,
+				698E22071D27AACD003CE1C7 /* Assets.xcassets in Resources */,
+				5AAE038E1D2A3E4F00CC94C5 /* placeholder-hi.png in Resources */,
+				5AAE03B41D2A7CAD00CC94C5 /* CustomTableViewCell.xib in Resources */,
+				5AAE038C1D2A3DB000CC94C5 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,14 +406,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4FDD210585B007570A1DC302 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5F1A782AAE35FEF07CF16B2B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKTask/Pods-VKTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9262EFB677EA098227FA5408 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VKTask/Pods-VKTask-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		691603CB1D27A84C00F1509B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				691603DA1D27A84C00F1509B /* ViewController.m in Sources */,
-				691603D71D27A84C00F1509B /* AppDelegate.m in Sources */,
-				691603D41D27A84C00F1509B /* main.m in Sources */,
+				5AAE03E41D2A7EE000CC94C5 /* User+CoreDataProperties.m in Sources */,
+				698E22211D27B53C003CE1C7 /* User.m in Sources */,
+				5AAE03B31D2A7CAD00CC94C5 /* CustomTableViewCell.m in Sources */,
+				69C4D8A31D2CB142002CE66A /* GalleryContentViewController.m in Sources */,
+				698E22111D27B405003CE1C7 /* dataBase.xcdatamodeld in Sources */,
+				5AAE03E11D2A7EC300CC94C5 /* Photo.m in Sources */,
+				6984A9711D2CB96600487ED5 /* CustomCollectionViewCell.m in Sources */,
+				698E220D1D27B239003CE1C7 /* AlbumsViewController.m in Sources */,
+				698E22031D27AA95003CE1C7 /* main.m in Sources */,
+				69C4D8A61D2CB80F002CE66A /* UIViewController+StatusBar.m in Sources */,
+				5AAE03E01D2A7EC300CC94C5 /* Photo+CoreDataProperties.m in Sources */,
+				698E21EC1D27A94A003CE1C7 /* AppDelegate.m in Sources */,
+				698E226C1D27CAA8003CE1C7 /* VKRequastTask.m in Sources */,
+				5AAE03DE1D2A7EC300CC94C5 /* Album+CoreDataProperties.m in Sources */,
+				5AAE03E71D2A8ADE00CC94C5 /* PhotosViewController.m in Sources */,
+				5AAE03DF1D2A7EC300CC94C5 /* Album.m in Sources */,
+				69C4D89E1D2CAE39002CE66A /* GalleryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +483,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				691603ED1D27A84C00F1509B /* VKTaskTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +490,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				691603F81D27A84C00F1509B /* VKTaskUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,25 +507,6 @@
 			targetProxy = 691603F41D27A84C00F1509B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		691603DB1D27A84C00F1509B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				691603DC1D27A84C00F1509B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		691603E01D27A84C00F1509B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				691603E11D27A84C00F1509B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		691603FA1D27A84C00F1509B /* Debug */ = {
@@ -413,22 +595,26 @@
 		};
 		691603FD1D27A84C00F1509B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A9126B5FB37F96F5BB30C31 /* Pods-VKTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = VKTask/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/VKTask/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vkTest.VKTask;
+				PRODUCT_BUNDLE_IDENTIFIER = vkTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		691603FE1D27A84C00F1509B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3B5BA0DB1CE5F21BCCEAB57 /* Pods-VKTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = VKTask/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/VKTask/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vkTest.VKTask;
+				PRODUCT_BUNDLE_IDENTIFIER = vkTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -498,6 +684,7 @@
 				691603FE1D27A84C00F1509B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		691603FF1D27A84C00F1509B /* Build configuration list for PBXNativeTarget "VKTaskTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +693,7 @@
 				691604011D27A84C00F1509B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		691604021D27A84C00F1509B /* Build configuration list for PBXNativeTarget "VKTaskUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,8 +702,22 @@
 				691604041D27A84C00F1509B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		698E220F1D27B405003CE1C7 /* dataBase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				698E22101D27B405003CE1C7 /* dataBase.xcdatamodel */,
+			);
+			currentVersion = 698E22101D27B405003CE1C7 /* dataBase.xcdatamodel */;
+			path = dataBase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 691603C71D27A84C00F1509B /* Project object */;
 }
