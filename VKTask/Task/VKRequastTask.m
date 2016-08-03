@@ -8,7 +8,7 @@
 
 #import "VKRequastTask.h"
 #import "User.h"
-#import <AFNetworking/AFNetworking.h>
+//#import <AFNetworking/AFNetworking.h>
 #import <VK-ios-sdk/VKSdk.h>
 #import "User.h"
 #import "Photo.h"
