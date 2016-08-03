@@ -12,6 +12,10 @@
 
 + (void)getUserInfoWithCompletionBlock:(void (^)(void))block;
 
+
+//Albums
 + (void)loadUserAlbumsWithCompletionBlock;
+//Audio
++ (void)loadUserAudioWithCompletionBlock;
 
 @end

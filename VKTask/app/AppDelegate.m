@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <VK-ios-sdk/VKSdk.h>
 #import "AlbumsViewController.h"
+#import "AudioTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,10 +24,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     if (!self.window) {
+        UITabBarController *tabBarController = [UITabBarController new];
         self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+
         AlbumsViewController *vc = [AlbumsViewController new];
+        vc.title = @"Albums";
         UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:vc];
-        self.window.rootViewController = nc;
+        
+        AudioTableViewController *audioVC = [AudioTableViewController new];
+        audioVC.title = @"Audio";
+        UINavigationController *audioNC = [[UINavigationController alloc]initWithRootViewController:audioVC];
+        
+        tabBarController.viewControllers = @[nc,audioNC];
+        self.window.rootViewController = tabBarController;
         [self.window makeKeyAndVisible];
     }
     

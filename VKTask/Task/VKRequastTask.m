@@ -37,6 +37,7 @@
     }];
 }
 
+//Albums
 + (void)loadUserAlbumsWithCompletionBlock {
     __weak typeof (self) weakSelf = self;
     VKRequest *request = [VKRequest requestWithMethod:@"photos.getAll"  parameters:@{@"count": @"200"}];
@@ -63,6 +64,20 @@
         for (NSDictionary *albumInfo in items) {
             [Album inserOrUpdateUserEntity:albumInfo];
         }
+    } errorBlock:^(NSError *error) {
+        
+    }];
+}
+
+
+//Audio
++ (void)loadUserAudioWithCompletionBlock {
+    VKRequest *request = [VKRequest requestWithMethod:@"audio.get"  parameters:@{}];
+    [request executeWithResultBlock:^(VKResponse *response) {
+//        NSArray <NSDictionary *> *items = [response.json objectForKey:@"items"];
+//        for (NSDictionary *albumInfo in items) {
+//            [Album inserOrUpdateUserEntity:albumInfo];
+//        }
     } errorBlock:^(NSError *error) {
         
     }];
