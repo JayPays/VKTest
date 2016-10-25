@@ -109,6 +109,7 @@ static NSString *idVK = @"5531179";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     UICollectionViewFlowLayout *aFlowLayout = [[UICollectionViewFlowLayout alloc] init];
     [aFlowLayout setMinimumLineSpacing:4];
     [aFlowLayout setMinimumInteritemSpacing:1];

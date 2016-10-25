@@ -74,6 +74,7 @@
 + (void)loadUserAudioWithCompletionBlock {
     VKRequest *request = [VKRequest requestWithMethod:@"audio.get"  parameters:@{}];
     [request executeWithResultBlock:^(VKResponse *response) {
+        NSLog(@"dsfsd");
 //        NSArray <NSDictionary *> *items = [response.json objectForKey:@"items"];
 //        for (NSDictionary *albumInfo in items) {
 //            [Album inserOrUpdateUserEntity:albumInfo];
