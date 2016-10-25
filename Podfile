@@ -4,4 +4,5 @@ platform :ios, '6.0'
 target 'VKTask' do
   pod 'VK-ios-sdk'
   pod 'SDWebImage'
+  pod 'AFNetworking'
 end

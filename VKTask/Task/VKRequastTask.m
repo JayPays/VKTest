@@ -13,6 +13,7 @@
 #import "Photo.h"
 #import "Album.h"
 #import "AudioTrack+CoreDataClass.h"
+#import <AFNetworking.h>
 
 
 @implementation VKRequastTask
@@ -81,6 +82,38 @@
     } errorBlock:^(NSError *error) {
         
     }];
+}
+
+#pragma mark - Download
+
+- (void)donwloadFileAtUrl:(NSString *)url
+withDonwloadProgressBlock:(DownloadProgressBlock)progressBlock
+          withFinishBlock:(DownloadFinishBlock)finishBlock {
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"url"];
+    operation.outputStream = [NSOutputStream outputStreamToFileAtPath:path append:NO];
+    
+    [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
+        if(progressBlock) {
+            progressBlock((float)totalBytesRead / totalBytesExpectedToRead);
+        }
+    }];
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if(finishBlock) {
+            finishBlock(nil);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if(finishBlock) {
+            finishBlock(error);
+        }
+    }];
+    
+    [operation start];
 }
 
 

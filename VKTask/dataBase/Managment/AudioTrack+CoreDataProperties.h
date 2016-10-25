@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *title;
 @property (nullable, nonatomic, copy) NSString *url;
 @property (nullable, nonatomic, copy) NSNumber *audioTrackID;
+@property (nullable, nonatomic, copy) NSString *filePath;
 
 @end
 

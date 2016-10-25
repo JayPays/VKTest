@@ -20,5 +20,6 @@
 @dynamic title;
 @dynamic url;
 @dynamic audioTrackID;
+@dynamic filePath;
 
 @end
