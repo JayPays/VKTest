@@ -27,19 +27,35 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgq-FC-hoK">
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEy-Xt-SUM">
+                                <state key="normal" title="Download"/>
+                                <connections>
+                                    <action selector="downloadAction:" destination="xGP-Pu-5nk" eventType="touchUpInside" id="nIF-sV-7jT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="FP3-8G-KJQ"/>
+                            <constraint firstAttribute="trailing" secondItem="gEy-Xt-SUM" secondAttribute="trailing" id="PZD-hU-vzm"/>
+                            <constraint firstItem="gEy-Xt-SUM" firstAttribute="top" secondItem="cgq-FC-hoK" secondAttribute="top" id="bRB-mM-BLB"/>
+                            <constraint firstItem="gEy-Xt-SUM" firstAttribute="leading" secondItem="cgq-FC-hoK" secondAttribute="leading" id="hET-H8-mOl"/>
+                            <constraint firstAttribute="bottom" secondItem="gEy-Xt-SUM" secondAttribute="bottom" id="jMW-x7-biM"/>
                         </constraints>
                     </view>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OBw-98-keO"/>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="OBw-98-keO" secondAttribute="trailing" id="04E-6b-X4U"/>
                     <constraint firstItem="cgq-FC-hoK" firstAttribute="top" secondItem="4Ql-S6-LNn" secondAttribute="top" id="B3h-2F-SgN"/>
                     <constraint firstAttribute="trailing" secondItem="cgq-FC-hoK" secondAttribute="trailing" id="Bxg-2W-WDj"/>
+                    <constraint firstItem="OBw-98-keO" firstAttribute="leading" secondItem="Kza-Mt-glm" secondAttribute="leading" id="IbX-6I-ZuI"/>
                     <constraint firstItem="e8j-78-ywU" firstAttribute="top" secondItem="Kza-Mt-glm" secondAttribute="bottom" constant="4" id="J2s-hF-vDX"/>
                     <constraint firstItem="cgq-FC-hoK" firstAttribute="leading" secondItem="e8j-78-ywU" secondAttribute="trailing" constant="16" id="JTb-99-phG"/>
                     <constraint firstAttribute="bottom" secondItem="cgq-FC-hoK" secondAttribute="bottom" id="Rfw-bb-pZ7"/>
                     <constraint firstItem="e8j-78-ywU" firstAttribute="leading" secondItem="Kza-Mt-glm" secondAttribute="leading" id="WH8-q9-kyh"/>
+                    <constraint firstAttribute="bottom" secondItem="OBw-98-keO" secondAttribute="bottom" id="aFh-Sf-Okd"/>
                     <constraint firstItem="Kza-Mt-glm" firstAttribute="top" secondItem="4Ql-S6-LNn" secondAttribute="topMargin" id="iZW-ut-gdZ"/>
                     <constraint firstItem="cgq-FC-hoK" firstAttribute="leading" secondItem="Kza-Mt-glm" secondAttribute="trailing" constant="16" id="oMr-5f-nBA"/>
                     <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="e8j-78-ywU" secondAttribute="bottom" id="oir-ZC-0ua"/>
@@ -48,6 +64,8 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="artistTrackLabel" destination="e8j-78-ywU" id="diJ-xr-pON"/>
+                <outlet property="downloadButton" destination="gEy-Xt-SUM" id="CEY-Bf-vqr"/>
+                <outlet property="progressView" destination="OBw-98-keO" id="qeL-l3-4j6"/>
                 <outlet property="titleTrackLabel" destination="Kza-Mt-glm" id="s6Z-d0-FXE"/>
             </connections>
             <point key="canvasLocation" x="-170.5" y="15"/>

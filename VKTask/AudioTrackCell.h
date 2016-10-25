@@ -12,5 +12,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *titleTrackLabel;
 @property (weak, nonatomic) IBOutlet UILabel *artistTrackLabel;
+@property (weak, nonatomic) IBOutlet UIButton *downloadButton;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressView;
+
+@property (copy, nonatomic) void (^downloadButtonActionBlock)(id sender);
 
 @end

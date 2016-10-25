@@ -15,10 +15,12 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+#pragma mark - Action
 
-    // Configure the view for the selected state
+- (IBAction)downloadAction:(id)sender {
+    if (self.downloadButtonActionBlock) {
+        self.downloadButtonActionBlock(sender);
+    }
 }
 
 @end

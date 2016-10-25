@@ -11,9 +11,25 @@
 #import "AudioTrack+CoreDataClass.h"
 #import "AppDelegate.h"
 
+typedef NS_ENUM(NSUInteger, AudioTrackState) {
+    AudioTrackStateDownloaded,
+    AudioTrackStateNotDownloaded,
+    AudioTrackStateNowDownload
+};
+
+@interface AudioTrackModel : NSObject
+@property (assign, nonatomic) NSInteger progress;
+@property (assign, nonatomic) AudioTrackState trackState;
+@end
+
+@implementation AudioTrackModel
+@end
+
 @interface AudioTableViewController () <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+
+@property (strong, nonatomic) NSMutableArray <AudioTrackModel *> *audioTrackModels;
 
 @end
 
@@ -36,6 +52,13 @@
         
     }
     
+    self.audioTrackModels = [NSMutableArray new];
+    for (id object in self.fetchedResultsController.fetchedObjects) {
+        AudioTrackModel *newModel = [AudioTrackModel new];
+        newModel.trackState = AudioTrackStateNotDownloaded;
+        [self.audioTrackModels addObject:newModel];
+    }
+    
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([AudioTrackCell class]) bundle:nil] forCellReuseIdentifier:@"Cell"];
 }
 
@@ -53,9 +76,42 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AudioTrackCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
+    //Content
     AudioTrack *audioTrack = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.titleTrackLabel.text = audioTrack.title;
     cell.artistTrackLabel.text = audioTrack.artist;
+    
+    //Download
+    cell.downloadButtonActionBlock = ^(id sender) {
+        
+    };
+    
+    //Reuse
+    AudioTrackModel *model = self.audioTrackModels[indexPath.row];
+    
+    switch (model.trackState) {
+        case AudioTrackStateDownloaded: {
+            cell.downloadButton.enabled = NO;
+            cell.progressView.hidden = YES;
+            break;
+        }
+            
+        case AudioTrackStateNotDownloaded: {
+            cell.downloadButton.enabled = YES;
+            cell.progressView.hidden = YES;
+            break;
+        }
+            
+        case AudioTrackStateNowDownload: {
+            cell.downloadButton.enabled = NO;
+            cell.progressView.hidden = NO;
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
     
     return cell;
 }
