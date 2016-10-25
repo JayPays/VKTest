@@ -12,25 +12,9 @@
 #import "AppDelegate.h"
 #import "VKRequastTask.h"
 
-typedef NS_ENUM(NSUInteger, AudioTrackState) {
-    AudioTrackStateDownloaded,
-    AudioTrackStateNotDownloaded,
-    AudioTrackStateNowDownload
-};
-
-@interface AudioTrackModel : NSObject
-@property (assign, nonatomic) NSInteger progress;
-@property (assign, nonatomic) AudioTrackState trackState;
-@end
-
-@implementation AudioTrackModel
-@end
-
 @interface AudioTableViewController () <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
-
-@property (strong, nonatomic) NSMutableArray <AudioTrackModel *> *audioTrackModels;
 @property (strong, nonatomic) VKRequastTask *downloadTask;
 
 @end
@@ -56,11 +40,8 @@ typedef NS_ENUM(NSUInteger, AudioTrackState) {
         
     }
     
-    self.audioTrackModels = [NSMutableArray new];
-    for (id object in self.fetchedResultsController.fetchedObjects) {
-        AudioTrackModel *newModel = [AudioTrackModel new];
-        newModel.trackState = [object valueForKey:@"filePath"] ? AudioTrackStateDownloaded: AudioTrackStateNotDownloaded;
-        [self.audioTrackModels addObject:newModel];
+    for (AudioTrack *audioTrack in self.fetchedResultsController.fetchedObjects) {
+        audioTrack.state = [audioTrack valueForKey:@"filePath"] ? @(AudioTrackStateDownloaded): @(AudioTrackStateNotDownloaded);
     }
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([AudioTrackCell class]) bundle:nil] forCellReuseIdentifier:@"Cell"];
@@ -82,7 +63,6 @@ typedef NS_ENUM(NSUInteger, AudioTrackState) {
     
     //Content
     AudioTrack *audioTrack = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    AudioTrackModel *model = self.audioTrackModels[indexPath.row];
     cell.titleTrackLabel.text = audioTrack.title;
     cell.artistTrackLabel.text = audioTrack.artist;
     
@@ -92,12 +72,12 @@ typedef NS_ENUM(NSUInteger, AudioTrackState) {
     cell.downloadButtonActionBlock = ^(id sender) {
         __strong typeof (weakSelf)strongSelf = weakSelf;
         __strong typeof (weakCell)strongCell = weakCell;
-        model.trackState = AudioTrackStateNowDownload;
+        audioTrack.state = @(AudioTrackStateNowDownload);
         [self.downloadTask donwloadFileAtUrl:audioTrack.url withDonwloadProgressBlock:^(CGFloat progress) {
-            model.progress = progress;
+            audioTrack.progress = @(progress);
             [strongSelf configureCell:strongCell atIndexPath:indexPath];
         } withFinishBlock:^(NSError *error) {
-            model.trackState = error ? AudioTrackStateNotDownloaded : AudioTrackStateDownloaded;
+            audioTrack.state = error ? @(AudioTrackStateNotDownloaded) : @(AudioTrackStateDownloaded);
             [strongSelf configureCell:strongCell atIndexPath:indexPath];
         }];
     };
@@ -108,9 +88,10 @@ typedef NS_ENUM(NSUInteger, AudioTrackState) {
 
 - (void)configureCell:(AudioTrackCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
-    AudioTrackModel *model = self.audioTrackModels[indexPath.row];
+    AudioTrack *audioTrack = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    switch (model.trackState) {
+    AudioTrackState state = [audioTrack.state integerValue];
+    switch (state) {
         case AudioTrackStateDownloaded: {
             cell.downloadButton.enabled = NO;
             cell.progressView.hidden = YES;
@@ -133,7 +114,7 @@ typedef NS_ENUM(NSUInteger, AudioTrackState) {
             break;
     }
     
-    cell.progressView.progress = model.progress;
+    cell.progressView.progress = [audioTrack.progress floatValue];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

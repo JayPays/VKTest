@@ -8,12 +8,22 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <UIKit/UIKit.h>
+
+typedef NS_ENUM(NSUInteger, AudioTrackState) {
+    AudioTrackStateDownloaded = 0,
+    AudioTrackStateNotDownloaded = 1,
+    AudioTrackStateNowDownload = 2
+};
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AudioTrack : NSManagedObject
 
 + (void)inserOrUpdateUserEntity:(NSDictionary *)json;
+
+@property (strong, nonatomic) NSNumber *state;
+@property (strong, nonatomic) NSNumber *progress;
 
 @end
 

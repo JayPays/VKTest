@@ -8,6 +8,10 @@
 
 #import "AudioTrack+CoreDataClass.h"
 #import "AppDelegate.h"
+#import <objc/runtime.h>
+
+static char stateKey;
+static char progressKey;
 
 @implementation AudioTrack
 
@@ -31,6 +35,24 @@
     
     NSLog(@"%@ %ld",audioTracks.firstObject ? @"Updated object with id = ": @"Inserted object with id = ",(long)audioTrackID.integerValue);
     [context save:nil];
+}
+
+#pragma mark - AssociatedObjecs
+
+- (void)setState:(NSNumber *)state {
+    objc_setAssociatedObject(self, &stateKey, state, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSNumber *)state {
+    return objc_getAssociatedObject(self, &stateKey);
+}
+
+- (void)setProgress:(NSNumber *)progress {
+    objc_setAssociatedObject(self, &progressKey, progress, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSNumber *)progress {
+    return objc_getAssociatedObject(self, &progressKey);
 }
 
 @end
