@@ -80,7 +80,7 @@
         }];
     };
     
-    [self configureCell:cell atIndexPath:indexPath];
+    [self configureCell:cell atIndexPath:audioTrack];
     return cell;
 }
 
@@ -89,39 +89,13 @@
     for (AudioTrackCell *cell in visibleCells) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
         AudioTrack *audioTrack = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        AudioTrackState state = [currentAudioTrack.state integerValue];
         if (currentAudioTrack == audioTrack) {
-            switch (state) {
-                case AudioTrackStateDownloaded: {
-                    cell.downloadButton.enabled = NO;
-                    cell.progressView.hidden = YES;
-                    break;
-                }
-                    
-                case AudioTrackStateNotDownloaded: {
-                    cell.downloadButton.enabled = YES;
-                    cell.progressView.hidden = YES;
-                    break;
-                }
-                    
-                case AudioTrackStateNowDownload: {
-                    cell.downloadButton.enabled = NO;
-                    cell.progressView.hidden = NO;
-                    break;
-                }
-                    
-                default:
-                    break;
-            }
-            
-            cell.progressView.progress = [currentAudioTrack.progress floatValue];
+            [self configureCell:cell atIndexPath:currentAudioTrack];
         }
     }
 }
 
-- (void)configureCell:(AudioTrackCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%ld",(long)indexPath.row);
-    AudioTrack *audioTrack = [self.fetchedResultsController objectAtIndexPath:indexPath];
+- (void)configureCell:(AudioTrackCell *)cell atIndexPath:(AudioTrack *)audioTrack {
     
     AudioTrackState state = [audioTrack.state integerValue];
     switch (state) {
