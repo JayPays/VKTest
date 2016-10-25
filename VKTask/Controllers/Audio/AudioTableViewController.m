@@ -68,17 +68,15 @@
     
     //Download
     __weak typeof (self)weakSelf = self;
-    __weak typeof (AudioTrackCell *)weakCell = cell;
     cell.downloadButtonActionBlock = ^(id sender) {
         __strong typeof (weakSelf)strongSelf = weakSelf;
-        __strong typeof (weakCell)strongCell = weakCell;
         audioTrack.state = @(AudioTrackStateNowDownload);
         [self.downloadTask donwloadFileAtUrl:audioTrack.url withDonwloadProgressBlock:^(CGFloat progress) {
             audioTrack.progress = @(progress);
-            [strongSelf configureCell:strongCell atIndexPath:indexPath];
+            [strongSelf updateVisibleCell:audioTrack];
         } withFinishBlock:^(NSError *error) {
             audioTrack.state = error ? @(AudioTrackStateNotDownloaded) : @(AudioTrackStateDownloaded);
-            [strongSelf configureCell:strongCell atIndexPath:indexPath];
+            [strongSelf updateVisibleCell:audioTrack];
         }];
     };
     
@@ -86,8 +84,43 @@
     return cell;
 }
 
+- (void)updateVisibleCell:(AudioTrack *)currentAudioTrack {
+    NSArray *visibleCells = [self.tableView visibleCells];
+    for (AudioTrackCell *cell in visibleCells) {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        AudioTrack *audioTrack = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        AudioTrackState state = [currentAudioTrack.state integerValue];
+        if (currentAudioTrack == audioTrack) {
+            switch (state) {
+                case AudioTrackStateDownloaded: {
+                    cell.downloadButton.enabled = NO;
+                    cell.progressView.hidden = YES;
+                    break;
+                }
+                    
+                case AudioTrackStateNotDownloaded: {
+                    cell.downloadButton.enabled = YES;
+                    cell.progressView.hidden = YES;
+                    break;
+                }
+                    
+                case AudioTrackStateNowDownload: {
+                    cell.downloadButton.enabled = NO;
+                    cell.progressView.hidden = NO;
+                    break;
+                }
+                    
+                default:
+                    break;
+            }
+            
+            cell.progressView.progress = [currentAudioTrack.progress floatValue];
+        }
+    }
+}
+
 - (void)configureCell:(AudioTrackCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    
+    NSLog(@"%ld",(long)indexPath.row);
     AudioTrack *audioTrack = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     AudioTrackState state = [audioTrack.state integerValue];
