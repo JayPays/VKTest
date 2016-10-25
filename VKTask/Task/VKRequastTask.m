@@ -8,11 +8,11 @@
 
 #import "VKRequastTask.h"
 #import "User.h"
-//#import <AFNetworking/AFNetworking.h>
 #import <VK-ios-sdk/VKSdk.h>
 #import "User.h"
 #import "Photo.h"
 #import "Album.h"
+#import "AudioTrack+CoreDataClass.h"
 
 
 @implementation VKRequastTask
@@ -74,11 +74,10 @@
 + (void)loadUserAudioWithCompletionBlock {
     VKRequest *request = [VKRequest requestWithMethod:@"audio.get"  parameters:@{}];
     [request executeWithResultBlock:^(VKResponse *response) {
-        NSLog(@"dsfsd");
-//        NSArray <NSDictionary *> *items = [response.json objectForKey:@"items"];
-//        for (NSDictionary *albumInfo in items) {
-//            [Album inserOrUpdateUserEntity:albumInfo];
-//        }
+        NSArray <NSDictionary *> *items = [response.json objectForKey:@"items"];
+        for (NSDictionary *albumInfo in items) {
+            [AudioTrack inserOrUpdateUserEntity:albumInfo];
+        }
     } errorBlock:^(NSError *error) {
         
     }];

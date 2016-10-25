@@ -19,5 +19,6 @@
 @dynamic duration;
 @dynamic title;
 @dynamic url;
+@dynamic audioTrackID;
 
 @end
