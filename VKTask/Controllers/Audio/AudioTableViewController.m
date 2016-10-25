@@ -7,7 +7,7 @@
 //
 
 #import "AudioTableViewController.h"
-#import "CustomTableViewCell.h"
+#import "AudioTrackCell.h"
 #import "AudioTrack+CoreDataClass.h"
 #import "AppDelegate.h"
 
@@ -28,13 +28,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.estimatedRowHeight = 44.0f;
+    
     self.fetchedResultsController.delegate = self;
     NSError *error;
     if (![[self fetchedResultsController] performFetch:&error]) {
         
     }
     
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CustomTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"Cell"];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([AudioTrackCell class]) bundle:nil] forCellReuseIdentifier:@"Cell"];
 }
 
 
@@ -49,12 +51,17 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    AudioTrackCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     AudioTrack *audioTrack = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = audioTrack.title;
+    cell.titleTrackLabel.text = audioTrack.title;
+    cell.artistTrackLabel.text = audioTrack.artist;
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
 }
 
 #pragma mark - FetchRequast delegate
