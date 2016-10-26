@@ -69,6 +69,7 @@
     cell.downloadButtonActionBlock = ^(id sender) {
         __strong typeof (weakSelf)strongSelf = weakSelf;
         audioTrack.state = @(AudioTrackStateNowDownload);
+        [strongSelf updateVisibleCell:audioTrack];
         [self.downloadTask donwloadFileAtUrl:audioTrack.url withDonwloadProgressBlock:^(CGFloat progress) {
             audioTrack.progress = @(progress);
             [strongSelf updateVisibleCell:audioTrack];
@@ -80,6 +81,10 @@
     
     [self configureCell:cell atIndexPath:audioTrack];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)updateVisibleCell:(AudioTrack *)currentAudioTrack {
