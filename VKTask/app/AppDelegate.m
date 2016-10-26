@@ -30,6 +30,8 @@
         AlbumsViewController *vc = [AlbumsViewController new];
         vc.title = @"Albums";
         UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:vc];
+        nc.navigationBar.tintColor = [UIColor whiteColor];
+        [nc.navigationBar setBarStyle:UIBarStyleBlack];
         
         AudioTableViewController *audioVC = [AudioTableViewController new];
         audioVC.title = @"Audio";

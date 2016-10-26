@@ -39,7 +39,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"Фото";
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.backgroundColor = [UIColor blackColor];
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CustomCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:@"Cell"];
     
     self.photos = [Photo getAllPhotosFromAlbumId:self.albumID];
@@ -73,14 +73,30 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat size = CGRectGetWidth(self.view.frame) / 4 - 3;
-    return CGSizeMake(size, size);
+    
+    if (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])) {
+        double size = CGRectGetWidth(self.view.frame) / 3 - 3;
+        return CGSizeMake(size, size);
+    } else {
+        double size = CGRectGetWidth(self.view.frame) / 2 - 2;
+        return CGSizeMake(size, size);
+    }
+}
+
+#pragma mark - Rotate
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [self.collectionView.collectionViewLayout invalidateLayout];
 }
 
 #pragma mark - load photo data
 
 - (void)loadData {
     
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end

@@ -113,7 +113,8 @@ static NSString *idVK = @"5531179";
     UICollectionViewFlowLayout *aFlowLayout = [[UICollectionViewFlowLayout alloc] init];
     [aFlowLayout setMinimumLineSpacing:4];
     [aFlowLayout setMinimumInteritemSpacing:1];
-    PhotosViewController *vc = [[PhotosViewController alloc]initWithCollectionViewLayout:aFlowLayout];;
+    PhotosViewController *vc = [[PhotosViewController alloc]initWithCollectionViewLayout:aFlowLayout];
+//    vc.hidesBottomBarWhenPushed = YES;
     Album *album = [self.fetchedResultsController objectAtIndexPath:indexPath];
     vc.albumID = album.albumID;
     [self.navigationController pushViewController:vc animated:YES];
@@ -232,6 +233,10 @@ static NSString *idVK = @"5531179";
     NSSortDescriptor *nameSort = [NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES];
     request.sortDescriptors = @[nameSort];
     return request;
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end
