@@ -60,22 +60,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     Photo *currentPhotoObject = self.photos[indexPath.row];
-    
-    
-    __weak typeof (cell) weakCell = cell;
-    SDWebImageManager *manager = [SDWebImageManager sharedManager];
-    [manager downloadImageWithURL:[NSURL URLWithString:currentPhotoObject.getImageUrl]
-                          options:0
-                         progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-                             // progression tracking code
-                         }
-                        completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-                            __strong typeof (weakCell) strongCell = weakCell;
-                            if (image) {
-                                strongCell.photoImageView.image = image;
-                            }
-                        }];
-    
+    [cell.photoImageView sd_setImageWithURL:[NSURL URLWithString:currentPhotoObject.getImageUrl]];
     return cell;
 }
 
