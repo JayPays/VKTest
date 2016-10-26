@@ -35,7 +35,7 @@ static NSString *idVK = @"5531179";
 
 - (void)laodView {
     UITableView *view = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    view.backgroundColor = [UIColor whiteColor];
+    view.backgroundColor = [UIColor blackColor];
     self.view = view;
 }
 
@@ -48,7 +48,7 @@ static NSString *idVK = @"5531179";
         
     }
     
-    self.scopeVK = @[VK_PER_FRIENDS, VK_PER_WALL, VK_PER_AUDIO, VK_PER_PHOTOS, VK_PER_NOHTTPS, VK_PER_EMAIL, VK_PER_MESSAGES];
+    self.scopeVK = @[VK_PER_FRIENDS, VK_PER_WALL, VK_PER_AUDIO, VK_PER_PHOTOS, VK_PER_NOHTTPS, VK_PER_EMAIL, VK_PER_MESSAGES,VK_PER_VIDEO];
 
     
     self.navigationItem.title = @"Альбомы";

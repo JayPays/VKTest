@@ -79,10 +79,23 @@
         for (NSDictionary *albumInfo in items) {
             [AudioTrack inserOrUpdateUserEntity:albumInfo];
         }
+        [self loadUserVideoWithCompletionBlock];
     } errorBlock:^(NSError *error) {
         
     }];
 }
+
+//Video
+
++ (void)loadUserVideoWithCompletionBlock {
+    VKRequest *request = [VKRequest requestWithMethod:@"video.get"  parameters:@{}];
+    [request executeWithResultBlock:^(VKResponse *response) {
+        NSArray <NSDictionary *> *items = [response.json objectForKey:@"items"];
+    } errorBlock:^(NSError *error) {
+        
+    }];
+}
+
 
 #pragma mark - Download
 
