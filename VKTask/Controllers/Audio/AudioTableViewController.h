@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIFetchResultTableViewController.h"
 
-@interface AudioTableViewController : UITableViewController
+@interface AudioTableViewController : UIFetchResultTableViewController
 
 @end

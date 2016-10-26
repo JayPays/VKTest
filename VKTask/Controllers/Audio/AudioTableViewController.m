@@ -12,9 +12,8 @@
 #import "AppDelegate.h"
 #import "VKRequastTask.h"
 
-@interface AudioTableViewController () <NSFetchedResultsControllerDelegate>
+@interface AudioTableViewController ()
 
-@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) VKRequastTask *downloadTask;
 
 @end
@@ -28,17 +27,16 @@
 }
 
 - (void)viewDidLoad {
+    self.fetchRequestName = NSStringFromClass([AudioTrack class]);
+    NSError *error;
+    if (![[self fetchedResultsController] performFetch:&error]) {
+        
+    }
     [super viewDidLoad];
     
     
     self.downloadTask = [VKRequastTask new];
     self.tableView.estimatedRowHeight = 44.0f;
-    
-    self.fetchedResultsController.delegate = self;
-    NSError *error;
-    if (![[self fetchedResultsController] performFetch:&error]) {
-        
-    }
     
     for (AudioTrack *audioTrack in self.fetchedResultsController.fetchedObjects) {
         audioTrack.state = [audioTrack valueForKey:@"filePath"] ? @(AudioTrackStateDownloaded): @(AudioTrackStateNotDownloaded);
@@ -126,85 +124,6 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewAutomaticDimension;
-}
-
-#pragma mark - FetchRequast delegate
-
-- (NSFetchedResultsController *)fetchedResultsController {
-    
-    if (_fetchedResultsController != nil) {
-        return _fetchedResultsController;
-    }
-    
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    
-    NSFetchedResultsController *theFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:[self fetchRequest]
-                                                                                                  managedObjectContext:appDelegate.managedObjectContext sectionNameKeyPath:nil
-                                                                                                             cacheName:nil];
-    self.fetchedResultsController = theFetchedResultsController;
-    _fetchedResultsController.delegate = self;
-    
-    return _fetchedResultsController;
-    
-}
-
-- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
-    [self.tableView beginUpdates];
-}
-
-
-- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
-    
-    UITableView *tableView = self.tableView;
-    
-    switch(type) {
-            
-        case NSFetchedResultsChangeInsert:
-            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeDelete:
-            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeUpdate:
-            [self.tableView cellForRowAtIndexPath:indexPath];
-            break;
-            
-        case NSFetchedResultsChangeMove:
-            [tableView deleteRowsAtIndexPaths:[NSArray
-                                               arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            [tableView insertRowsAtIndexPaths:[NSArray
-                                               arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-    }
-}
-
-
-- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id )sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
-    switch(type) {
-        case NSFetchedResultsChangeInsert:
-            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeDelete:
-            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-    }
-}
-
-
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-    [self.tableView endUpdates];
-}
-
-#pragma mark - Fetch
-
-- (NSFetchRequest *)fetchRequest {
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([AudioTrack class])];
-    NSSortDescriptor *nameSort = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
-    request.sortDescriptors = @[nameSort];
-    return request;
 }
 
 
