@@ -38,6 +38,8 @@
         UINavigationController *audioNC = [[UINavigationController alloc]initWithRootViewController:audioVC];
         
         tabBarController.viewControllers = @[nc,audioNC];
+        tabBarController.tabBar.barStyle = UIBarStyleBlack;
+        tabBarController.tabBar.tintColor = [UIColor whiteColor];
         self.window.rootViewController = tabBarController;
         [self.window makeKeyAndVisible];
     }
