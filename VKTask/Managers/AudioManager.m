@@ -13,6 +13,7 @@
 @interface AudioManager()
 
 @property (strong, nonatomic) AVAudioPlayer *player;
+@property (weak, nonatomic) AudioTrack *currentTrack;
 
 @end
 
@@ -26,18 +27,14 @@
     return manager;
 }
 
-//- (instancetype)init {
-//    if (self == [super init]) {
-//        self.player = [AVAudioPlayer new];
-//    }
-//    return self;
-//}
-
 #pragma mark - Player Action
 
 - (void)playTrackAtId:(NSInteger)trackId {
     AudioTrack *audioTrack = [AudioTrack getTrackFromId:trackId];
+    
+    if (audioTrack == self.currentTrack) return;
     if (!audioTrack.filePath.length) return;
+    
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *path = [[paths objectAtIndex:0] stringByAppendingPathComponent:audioTrack.filePath];
     NSURL *url = [NSURL fileURLWithPath:path];
@@ -45,6 +42,9 @@
     NSError *error = nil;
     self.player = [[AVAudioPlayer alloc]initWithData:data error:&error];
     [self.player play];
+    if (!error) {
+        self.currentTrack = audioTrack;
+    }
 }
 
 @end
