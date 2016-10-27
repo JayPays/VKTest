@@ -70,7 +70,7 @@
         __strong typeof (weakSelf)strongSelf = weakSelf;
         audioTrack.state = @(AudioTrackStateNowDownload);
         [strongSelf updateVisibleCell:audioTrack];
-        [self.downloadTask donwloadFileAtUrl:audioTrack.url withDonwloadProgressBlock:^(CGFloat progress) {
+        [self.downloadTask donwloadFileAtUrl:audioTrack.url withObjectID:[audioTrack.audioTrackID integerValue] withDonwloadProgressBlock:^(CGFloat progress) {
             audioTrack.progress = @(progress);
             [strongSelf updateVisibleCell:audioTrack];
         } withFinishBlock:^(NSError *error) {

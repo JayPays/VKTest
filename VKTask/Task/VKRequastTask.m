@@ -98,15 +98,17 @@
 
 #pragma mark - Download
 
-- (void)donwloadFileAtUrl:(NSString *)url
+- (void)donwloadFileAtUrl:(NSString *)urlString
+             withObjectID:(NSInteger)objectID
 withDonwloadProgressBlock:(DownloadProgressBlock)progressBlock
           withFinishBlock:(DownloadFinishBlock)finishBlock {
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"url"];
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSString *path = [[paths objectAtIndex:0] stringByAppendingPathComponent:[[url relativePath] lastPathComponent]];
     operation.outputStream = [NSOutputStream outputStreamToFileAtPath:path append:NO];
     
     [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
@@ -116,6 +118,9 @@ withDonwloadProgressBlock:(DownloadProgressBlock)progressBlock
     }];
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *dictionary = @{@"id" : [NSString stringWithFormat:@"%ld",(long)objectID],
+                                     @"filePath" : path };
+        [AudioTrack inserOrUpdateUserEntity:dictionary];
         if(finishBlock) {
             finishBlock(nil);
         }

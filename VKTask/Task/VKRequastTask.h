@@ -25,7 +25,8 @@ typedef void(^DownloadFinishBlock)(NSError *error);
 
 //Download
 
-- (void)donwloadFileAtUrl:(NSString *)url
+- (void)donwloadFileAtUrl:(NSString *)urlString
+             withObjectID:(NSInteger)objectID
 withDonwloadProgressBlock:(DownloadProgressBlock)progressBlock
           withFinishBlock:(DownloadFinishBlock)finishBlock;
 

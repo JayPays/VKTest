@@ -17,7 +17,7 @@ static char progressKey;
 
 + (void)inserOrUpdateUserEntity:(NSDictionary *)json {
     
-    NSNumber *audioTrackID = [json objectForKey:@"id"];
+    NSNumber *audioTrackID = @([[json objectForKey:@"id"] integerValue]);
     
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([AudioTrack class])];
     request.predicate = [NSPredicate predicateWithFormat:@"audioTrackID==%@",audioTrackID];
@@ -27,11 +27,31 @@ static char progressKey;
     
     AudioTrack *audioTrack = audioTracks.firstObject ? audioTracks.firstObject : (AudioTrack *)[NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([AudioTrack class]) inManagedObjectContext:context];
     audioTrack.audioTrackID = audioTrackID;
-    audioTrack.title = [json objectForKey:@"title"];
-    audioTrack.artist = [json objectForKey:@"artist"];
-    audioTrack.duration = [json objectForKey:@"duration"];
-    audioTrack.url = [json objectForKey:@"url"];
-    audioTrack.date = [NSDate dateWithTimeIntervalSinceReferenceDate:[[json objectForKey:@"date"] integerValue]];
+    
+    
+    if ([[json objectForKey:@"title"] length]) {
+        audioTrack.title = [json objectForKey:@"title"];
+    }
+    
+    if ([[json objectForKey:@"artist"] length]) {
+        audioTrack.artist = [json objectForKey:@"artist"];
+    }
+    
+    if ([json objectForKey:@"duration"]) {
+        audioTrack.duration = [json objectForKey:@"duration"];
+    }
+    
+    if ([[json objectForKey:@"url"] length]) {
+        audioTrack.url = [json objectForKey:@"url"];
+    }
+    
+    if ([[json objectForKey:@"filePath"] length]) {
+        audioTrack.filePath = [json objectForKey:@"filePath"];
+    }
+    
+    if ([json objectForKey:@"date"]) {
+         audioTrack.date = [NSDate dateWithTimeIntervalSinceReferenceDate:[[json objectForKey:@"date"] integerValue]];
+    }
     
     NSLog(@"%@ %ld",audioTracks.firstObject ? @"Updated object with id = ": @"Inserted object with id = ",(long)audioTrackID.integerValue);
     [context save:nil];
