@@ -12,4 +12,7 @@
 
 + (AudioManager *)sharedInstance;
 
+
+- (void)playTrackAtId:(NSInteger)trackId;
+
 @end

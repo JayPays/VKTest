@@ -11,6 +11,7 @@
 #import "AudioTrack+CoreDataClass.h"
 #import "AppDelegate.h"
 #import "VKRequastTask.h"
+#import "AudioManager.h"
 
 @interface AudioTableViewController ()
 
@@ -84,6 +85,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    AudioTrack *audioTrack = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [[AudioManager sharedInstance] playTrackAtId:[audioTrack.audioTrackID integerValue]];
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

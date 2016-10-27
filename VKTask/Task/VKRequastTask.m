@@ -119,7 +119,7 @@ withDonwloadProgressBlock:(DownloadProgressBlock)progressBlock
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *dictionary = @{@"id" : [NSString stringWithFormat:@"%ld",(long)objectID],
-                                     @"filePath" : path };
+                                     @"filePath" : [[url relativePath] lastPathComponent] };
         [AudioTrack inserOrUpdateUserEntity:dictionary];
         if(finishBlock) {
             finishBlock(nil);
