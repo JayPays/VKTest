@@ -37,6 +37,16 @@ static char progressKey;
     [context save:nil];
 }
 
++ (AudioTrack *)getTrackFromId:(NSInteger)trackID {
+    NSNumber *audioTrackID = @(trackID);
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([AudioTrack class])];
+    request.predicate = [NSPredicate predicateWithFormat:@"audioTrackID==%@",audioTrackID];
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = delegate.managedObjectContext;
+    NSArray <AudioTrack *> *audioTracks = [context executeFetchRequest:request error:nil];
+    return audioTracks.firstObject;
+}
+
 #pragma mark - AssociatedObjecs
 
 - (void)setState:(NSNumber *)state {

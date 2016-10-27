@@ -86,7 +86,6 @@
 }
 
 //Video
-
 + (void)loadUserVideoWithCompletionBlock {
     VKRequest *request = [VKRequest requestWithMethod:@"video.get"  parameters:@{}];
     [request executeWithResultBlock:^(VKResponse *response) {

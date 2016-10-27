@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSNumber *state;
 @property (strong, nonatomic) NSNumber *progress;
 
++ (AudioTrack *)getTrackFromId:(NSInteger)trackID;
+
 @end
 
 NS_ASSUME_NONNULL_END
