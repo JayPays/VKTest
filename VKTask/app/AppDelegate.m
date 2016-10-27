@@ -10,6 +10,7 @@
 #import <VK-ios-sdk/VKSdk.h>
 #import "AlbumsViewController.h"
 #import "AudioTableViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
 
@@ -22,6 +23,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSError *sessionError = nil;
+    NSError *activationError = nil;
+    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback error:&sessionError];
+    [[AVAudioSession sharedInstance] setActive: YES error: &activationError];
     
     if (!self.window) {
         UITabBarController *tabBarController = [UITabBarController new];

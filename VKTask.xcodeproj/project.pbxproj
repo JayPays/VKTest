@@ -427,6 +427,11 @@
 					691603CE1D27A84C00F1509B = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = QKNV954376;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					691603E71D27A84C00F1509B = {
 						CreatedOnToolsVersion = 7.3.1;
