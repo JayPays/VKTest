@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A1FC8911DC36E4000682E49 /* AudioTrackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FC88F1DC36E4000682E49 /* AudioTrackCell.m */; };
+		5A1FC8921DC36E4000682E49 /* AudioTrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A1FC8901DC36E4000682E49 /* AudioTrackCell.xib */; };
+		5A1FC8961DC36E5D00682E49 /* MusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FC8951DC36E5D00682E49 /* MusicView.m */; };
+		5A1FC8981DC36E6300682E49 /* MusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A1FC8971DC36E6300682E49 /* MusicView.xib */; };
 		5A51F8DC1DC1DF5F002B178D /* AudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A51F8DB1DC1DF5F002B178D /* AudioManager.m */; };
 		5A51F8DE1DC1DFD8002B178D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A51F8DD1DC1DFD8002B178D /* AVFoundation.framework */; };
 		5AAE038C1D2A3DB000CC94C5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 698E21F31D27A9AF003CE1C7 /* Default-568h@2x.png */; };
@@ -21,8 +25,6 @@
 		5ACBA8A31DBF5C9A003D2D12 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ACBA8A21DBF5C9A003D2D12 /* Launch.storyboard */; };
 		5ACBA8A81DBF600F003D2D12 /* AudioTrack+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACBA8A51DBF600F003D2D12 /* AudioTrack+CoreDataClass.m */; };
 		5ACBA8A91DBF600F003D2D12 /* AudioTrack+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACBA8A71DBF600F003D2D12 /* AudioTrack+CoreDataProperties.m */; };
-		5ACBA8AC1DBF64CA003D2D12 /* AudioTrackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACBA8AB1DBF64CA003D2D12 /* AudioTrackCell.m */; };
-		5ACBA8AE1DBF64D6003D2D12 /* AudioTrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ACBA8AD1DBF64D6003D2D12 /* AudioTrackCell.xib */; };
 		5ACBA8B11DBF8F31003D2D12 /* UIFetchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACBA8B01DBF8F31003D2D12 /* UIFetchResultTableViewController.m */; };
 		5ACBA8B71DC0ACA2003D2D12 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACBA8B61DC0ACA2003D2D12 /* SettingsViewController.m */; };
 		6984A9711D2CB96600487ED5 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6984A96F1D2CB96600487ED5 /* CustomCollectionViewCell.m */; };
@@ -61,6 +63,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A1FC88E1DC36E4000682E49 /* AudioTrackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioTrackCell.h; path = Cells/AudioTrackCell.h; sourceTree = "<group>"; };
+		5A1FC88F1DC36E4000682E49 /* AudioTrackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioTrackCell.m; path = Cells/AudioTrackCell.m; sourceTree = "<group>"; };
+		5A1FC8901DC36E4000682E49 /* AudioTrackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AudioTrackCell.xib; path = Cells/AudioTrackCell.xib; sourceTree = "<group>"; };
+		5A1FC8941DC36E5D00682E49 /* MusicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicView.h; sourceTree = "<group>"; };
+		5A1FC8951DC36E5D00682E49 /* MusicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicView.m; sourceTree = "<group>"; };
+		5A1FC8971DC36E6300682E49 /* MusicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicView.xib; sourceTree = "<group>"; };
 		5A51F8DA1DC1DF5F002B178D /* AudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManager.h; sourceTree = "<group>"; };
 		5A51F8DB1DC1DF5F002B178D /* AudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioManager.m; sourceTree = "<group>"; };
 		5A51F8DD1DC1DFD8002B178D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -83,9 +91,6 @@
 		5ACBA8A51DBF600F003D2D12 /* AudioTrack+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AudioTrack+CoreDataClass.m"; sourceTree = "<group>"; };
 		5ACBA8A61DBF600F003D2D12 /* AudioTrack+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AudioTrack+CoreDataProperties.h"; sourceTree = "<group>"; };
 		5ACBA8A71DBF600F003D2D12 /* AudioTrack+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AudioTrack+CoreDataProperties.m"; sourceTree = "<group>"; };
-		5ACBA8AA1DBF64CA003D2D12 /* AudioTrackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioTrackCell.h; sourceTree = "<group>"; };
-		5ACBA8AB1DBF64CA003D2D12 /* AudioTrackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioTrackCell.m; sourceTree = "<group>"; };
-		5ACBA8AD1DBF64D6003D2D12 /* AudioTrackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioTrackCell.xib; sourceTree = "<group>"; };
 		5ACBA8AF1DBF8F31003D2D12 /* UIFetchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFetchResultTableViewController.h; sourceTree = "<group>"; };
 		5ACBA8B01DBF8F31003D2D12 /* UIFetchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFetchResultTableViewController.m; sourceTree = "<group>"; };
 		5ACBA8B51DC0ACA2003D2D12 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -161,6 +166,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5A1FC8931DC36E4700682E49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A1FC8941DC36E5D00682E49 /* MusicView.h */,
+				5A1FC8951DC36E5D00682E49 /* MusicView.m */,
+				5A1FC8971DC36E6300682E49 /* MusicView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5A51F8D91DC1DF51002B178D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,15 +188,15 @@
 		5AAE03861D2A3CA600CC94C5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				5A1FC88E1DC36E4000682E49 /* AudioTrackCell.h */,
+				5A1FC88F1DC36E4000682E49 /* AudioTrackCell.m */,
+				5A1FC8901DC36E4000682E49 /* AudioTrackCell.xib */,
 				5AAE03B01D2A7CAD00CC94C5 /* CustomTableViewCell.h */,
 				5AAE03B11D2A7CAD00CC94C5 /* CustomTableViewCell.m */,
 				5AAE03B21D2A7CAD00CC94C5 /* CustomTableViewCell.xib */,
 				6984A96E1D2CB96600487ED5 /* CustomCollectionViewCell.h */,
 				6984A96F1D2CB96600487ED5 /* CustomCollectionViewCell.m */,
 				6984A9701D2CB96600487ED5 /* CustomCollectionViewCell.xib */,
-				5ACBA8AA1DBF64CA003D2D12 /* AudioTrackCell.h */,
-				5ACBA8AB1DBF64CA003D2D12 /* AudioTrackCell.m */,
-				5ACBA8AD1DBF64D6003D2D12 /* AudioTrackCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -235,6 +250,7 @@
 		691603D11D27A84C00F1509B /* VKTask */ = {
 			isa = PBXGroup;
 			children = (
+				5A1FC8931DC36E4700682E49 /* View */,
 				5A51F8D91DC1DF51002B178D /* Managers */,
 				5AAE03861D2A3CA600CC94C5 /* Cells */,
 				5ABBD91D1D2A270200107A9E /* Categories */,
@@ -470,7 +486,8 @@
 			files = (
 				69C4D8A01D2CAF3C002CE66A /* close.png in Resources */,
 				6984A9721D2CB96600487ED5 /* CustomCollectionViewCell.xib in Resources */,
-				5ACBA8AE1DBF64D6003D2D12 /* AudioTrackCell.xib in Resources */,
+				5A1FC8981DC36E6300682E49 /* MusicView.xib in Resources */,
+				5A1FC8921DC36E4000682E49 /* AudioTrackCell.xib in Resources */,
 				698E22071D27AACD003CE1C7 /* Assets.xcassets in Resources */,
 				5AAE038E1D2A3E4F00CC94C5 /* placeholder-hi.png in Resources */,
 				5ACBA8A31DBF5C9A003D2D12 /* Launch.storyboard in Resources */,
@@ -550,18 +567,19 @@
 			files = (
 				5ACBA8A91DBF600F003D2D12 /* AudioTrack+CoreDataProperties.m in Sources */,
 				5AAE03E41D2A7EE000CC94C5 /* User+CoreDataProperties.m in Sources */,
+				5A1FC8911DC36E4000682E49 /* AudioTrackCell.m in Sources */,
 				5ACBA8A81DBF600F003D2D12 /* AudioTrack+CoreDataClass.m in Sources */,
 				698E22211D27B53C003CE1C7 /* User.m in Sources */,
 				5AAE03B31D2A7CAD00CC94C5 /* CustomTableViewCell.m in Sources */,
 				698E22111D27B405003CE1C7 /* dataBase.xcdatamodeld in Sources */,
 				5A51F8DC1DC1DF5F002B178D /* AudioManager.m in Sources */,
 				5AAE03E11D2A7EC300CC94C5 /* Photo.m in Sources */,
+				5A1FC8961DC36E5D00682E49 /* MusicView.m in Sources */,
 				E4E96EF71D52487600691D66 /* AlbumsViewController.m in Sources */,
 				6984A9711D2CB96600487ED5 /* CustomCollectionViewCell.m in Sources */,
 				E4E96EF91D52487600691D66 /* GalleryViewController.m in Sources */,
 				E4E96EFA1D52487600691D66 /* PhotosViewController.m in Sources */,
 				5ACBA8B71DC0ACA2003D2D12 /* SettingsViewController.m in Sources */,
-				5ACBA8AC1DBF64CA003D2D12 /* AudioTrackCell.m in Sources */,
 				698E22031D27AA95003CE1C7 /* main.m in Sources */,
 				E4E96EFE1D5248AE00691D66 /* AudioTableViewController.m in Sources */,
 				69C4D8A61D2CB80F002CE66A /* UIViewController+StatusBar.m in Sources */,
