@@ -96,6 +96,7 @@
         AudioTrack *audioTrack = self.fetchedResultsController.fetchedObjects[indexPath.row];
         [VKRequastTask deleteFileAtObjectId:[audioTrack.audioTrackID integerValue]];
         [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:audioTrack];
+        [self.tableView setEditing:NO animated:YES];
     }
 }
 
