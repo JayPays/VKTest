@@ -67,6 +67,12 @@ static char progressKey;
     return audioTracks.firstObject;
 }
 
++ (void)deleteEntityAtObjectId:(NSInteger)objectID {
+    AudioTrack *audioTrack = [AudioTrack getTrackFromId:objectID];
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    [delegate.managedObjectContext deleteObject:audioTrack];
+}
+
 #pragma mark - AssociatedObjecs
 
 - (void)setState:(NSNumber *)state {

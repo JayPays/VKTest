@@ -21,12 +21,6 @@
 
 @implementation AudioTableViewController
 
-- (void)laodView {
-    UITableView *view = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    view.backgroundColor = [UIColor whiteColor];
-    self.view = view;
-}
-
 - (void)viewDidLoad {
     self.fetchRequestName = NSStringFromClass([AudioTrack class]);
     NSError *error;
@@ -44,6 +38,8 @@
     }
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([AudioTrackCell class]) bundle:nil] forCellReuseIdentifier:@"Cell"];
+    
+    self.tableView.allowsMultipleSelectionDuringEditing = NO;
 }
 
 
@@ -88,6 +84,19 @@
     AudioTrack *audioTrack = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [[AudioManager sharedInstance] playTrackAtId:[audioTrack.audioTrackID integerValue]];
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    AudioTrack *audioTrack = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    return audioTrack.filePath.length;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        AudioTrack *audioTrack = self.fetchedResultsController.fetchedObjects[indexPath.row];
+        [VKRequastTask deleteFileAtObjectId:[audioTrack.audioTrackID integerValue]];
+        [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:audioTrack];
+    }
 }
 
 - (void)updateVisibleCell:(AudioTrack *)currentAudioTrack {

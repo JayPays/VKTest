@@ -95,6 +95,16 @@
     }];
 }
 
++ (void)deleteFileAtObjectId:(NSInteger)objectID {
+    AudioTrack *audioTrack = [AudioTrack getTrackFromId:objectID];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *path = [[paths objectAtIndex:0] stringByAppendingPathComponent:audioTrack.filePath];
+    BOOL success = [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    if (success) {
+        audioTrack.state = @(AudioTrackStateNotDownloaded);
+    }
+}
+
 
 #pragma mark - Download
 

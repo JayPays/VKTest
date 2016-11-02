@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSNumber *progress;
 
 + (AudioTrack *)getTrackFromId:(NSInteger)trackID;
++ (void)deleteEntityAtObjectId:(NSInteger)objectID;
 
 @end
 

@@ -30,4 +30,6 @@ typedef void(^DownloadFinishBlock)(NSError *error);
 withDonwloadProgressBlock:(DownloadProgressBlock)progressBlock
           withFinishBlock:(DownloadFinishBlock)finishBlock;
 
++ (void)deleteFileAtObjectId:(NSInteger)objectID;
+
 @end
