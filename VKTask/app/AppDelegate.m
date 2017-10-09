@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import <VK-ios-sdk/VKSdk.h>
 #import "AlbumsViewController.h"
-#import "AudioTableViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate ()
@@ -30,23 +29,13 @@
     [[AVAudioSession sharedInstance] setActive: YES error: &activationError];
     
     if (!self.window) {
-        UITabBarController *tabBarController = [UITabBarController new];
         self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-
         AlbumsViewController *vc = [AlbumsViewController new];
         vc.title = @"Albums";
         UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:vc];
         nc.navigationBar.tintColor = [UIColor whiteColor];
         [nc.navigationBar setBarStyle:UIBarStyleBlack];
-        
-        AudioTableViewController *audioVC = [AudioTableViewController new];
-        audioVC.title = @"Audio";
-        UINavigationController *audioNC = [[UINavigationController alloc]initWithRootViewController:audioVC];
-        
-        tabBarController.viewControllers = @[nc,audioNC];
-        tabBarController.tabBar.barStyle = UIBarStyleBlack;
-        tabBarController.tabBar.tintColor = [UIColor whiteColor];
-        self.window.rootViewController = tabBarController;
+        self.window.rootViewController = nc;
         [self.window makeKeyAndVisible];
     }
     

@@ -66,7 +66,6 @@ static NSString *idVK = @"5531179";
         if (state == VKAuthorizationAuthorized) {
             [VKRequastTask getUserInfoWithCompletionBlock:^{
                 [VKRequastTask loadUserAlbumsWithCompletionBlock];
-                [VKRequastTask loadUserAudioWithCompletionBlock];
             }];
         } else {
             [VKSdk authorize:strongSelf.scopeVK];
