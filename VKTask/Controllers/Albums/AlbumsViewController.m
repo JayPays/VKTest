@@ -113,7 +113,6 @@ static NSString *idVK = @"5531179";
     [aFlowLayout setMinimumLineSpacing:4];
     [aFlowLayout setMinimumInteritemSpacing:1];
     PhotosViewController *vc = [[PhotosViewController alloc]initWithCollectionViewLayout:aFlowLayout];
-//    vc.hidesBottomBarWhenPushed = YES;
     Album *album = [self.fetchedResultsController objectAtIndexPath:indexPath];
     vc.albumID = album.albumID;
     [self.navigationController pushViewController:vc animated:YES];
