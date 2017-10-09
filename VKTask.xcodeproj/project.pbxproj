@@ -24,7 +24,6 @@
 		6957EBF31F8B652B008EFD19 /* GalleryViewController+LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957EBF21F8B652B008EFD19 /* GalleryViewController+LoadView.m */; };
 		695985851F8B5EAC00DCBF9E /* AlbumsViewController+LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 695985841F8B5EAC00DCBF9E /* AlbumsViewController+LoadView.m */; };
 		6984A9711D2CB96600487ED5 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6984A96F1D2CB96600487ED5 /* CustomCollectionViewCell.m */; };
-		6984A9721D2CB96600487ED5 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6984A9701D2CB96600487ED5 /* CustomCollectionViewCell.xib */; };
 		698E21EC1D27A94A003CE1C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E21E01D27A94A003CE1C7 /* AppDelegate.m */; };
 		698E22031D27AA95003CE1C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E22021D27AA95003CE1C7 /* main.m */; };
 		698E22071D27AACD003CE1C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 698E22061D27AACD003CE1C7 /* Assets.xcassets */; };
@@ -87,7 +86,6 @@
 		695985841F8B5EAC00DCBF9E /* AlbumsViewController+LoadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AlbumsViewController+LoadView.m"; sourceTree = "<group>"; };
 		6984A96E1D2CB96600487ED5 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomCollectionViewCell.h; path = Cells/CustomCollectionViewCell.h; sourceTree = "<group>"; };
 		6984A96F1D2CB96600487ED5 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomCollectionViewCell.m; path = Cells/CustomCollectionViewCell.m; sourceTree = "<group>"; };
-		6984A9701D2CB96600487ED5 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomCollectionViewCell.xib; path = Cells/CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		698E21DF1D27A94A003CE1C7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		698E21E01D27A94A003CE1C7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		698E21EA1D27A94A003CE1C7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -147,13 +145,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5A51F8D91DC1DF51002B178D /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
 		5AAE03861D2A3CA600CC94C5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +153,6 @@
 				5AAE03B21D2A7CAD00CC94C5 /* CustomTableViewCell.xib */,
 				6984A96E1D2CB96600487ED5 /* CustomCollectionViewCell.h */,
 				6984A96F1D2CB96600487ED5 /* CustomCollectionViewCell.m */,
-				6984A9701D2CB96600487ED5 /* CustomCollectionViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -198,7 +188,6 @@
 		691603D11D27A84C00F1509B /* VKTask */ = {
 			isa = PBXGroup;
 			children = (
-				5A51F8D91DC1DF51002B178D /* Managers */,
 				5AAE03861D2A3CA600CC94C5 /* Cells */,
 				698E22691D27CA94003CE1C7 /* Task */,
 				698E220E1D27B3F7003CE1C7 /* dataBase */,
@@ -462,7 +451,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				69C4D8A01D2CAF3C002CE66A /* close.png in Resources */,
-				6984A9721D2CB96600487ED5 /* CustomCollectionViewCell.xib in Resources */,
 				698E22071D27AACD003CE1C7 /* Assets.xcassets in Resources */,
 				5AAE038E1D2A3E4F00CC94C5 /* placeholder-hi.png in Resources */,
 				5ACBA8A31DBF5C9A003D2D12 /* Launch.storyboard in Resources */,

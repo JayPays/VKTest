@@ -10,7 +10,7 @@
 
 @interface CustomCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (strong, nonatomic) UIImageView *photoImageView;
 
 
 @end

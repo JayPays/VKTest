@@ -40,7 +40,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [super viewDidLoad];
     self.navigationItem.title = @"Фото";
     self.collectionView.backgroundColor = [UIColor blackColor];
-    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CustomCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:@"Cell"];
+    [self.collectionView registerClass:[CustomCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     self.photos = [Photo getAllPhotosFromAlbumId:self.albumID];
 }
