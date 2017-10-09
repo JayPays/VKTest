@@ -20,10 +20,13 @@
 /* controllers */
 #import "GalleryViewController.h"
 
+/* statics */
+static NSString * const reuseIdentifier = @"Cell";
+
 @interface PhotosViewController ()
 <
-UICollectionViewDelegate,
-UICollectionViewDataSource
+    UICollectionViewDelegate,
+    UICollectionViewDataSource
 >
 
 @property (strong,nonatomic) NSArray <Photo *> *photos;
@@ -31,17 +34,6 @@ UICollectionViewDataSource
 @end
 
 @implementation PhotosViewController
-
-
-static NSString * const reuseIdentifier = @"Cell";
-
-- (void)laodView {
-    self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame];
-    [collectionView setDataSource:self];
-    [collectionView setDelegate:self];
-    self.collectionView = collectionView;
-}
 
 
 - (void)viewDidLoad {
