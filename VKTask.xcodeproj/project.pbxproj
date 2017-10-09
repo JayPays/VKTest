@@ -18,6 +18,7 @@
 		5AAE03E11D2A7EC300CC94C5 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE03DD1D2A7EC300CC94C5 /* Photo.m */; };
 		5AAE03E41D2A7EE000CC94C5 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE03E31D2A7EE000CC94C5 /* User+CoreDataProperties.m */; };
 		5ACBA8A31DBF5C9A003D2D12 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ACBA8A21DBF5C9A003D2D12 /* Launch.storyboard */; };
+		693349C81F8B8A3000CEE1CF /* GalleryContentViewController+LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 693349C71F8B8A3000CEE1CF /* GalleryContentViewController+LoadView.m */; };
 		6957EBEC1F8B62A3008EFD19 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957EBEB1F8B62A3008EFD19 /* PhotosViewController.m */; };
 		6957EBEF1F8B6350008EFD19 /* PhotosViewController+LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957EBEE1F8B6350008EFD19 /* PhotosViewController+LoadView.m */; };
 		6957EBF31F8B652B008EFD19 /* GalleryViewController+LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957EBF21F8B652B008EFD19 /* GalleryViewController+LoadView.m */; };
@@ -74,6 +75,8 @@
 		691603CF1D27A84C00F1509B /* VKTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		691603E81D27A84C00F1509B /* VKTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		691603F31D27A84C00F1509B /* VKTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		693349C61F8B8A3000CEE1CF /* GalleryContentViewController+LoadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GalleryContentViewController+LoadView.h"; sourceTree = "<group>"; };
+		693349C71F8B8A3000CEE1CF /* GalleryContentViewController+LoadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GalleryContentViewController+LoadView.m"; sourceTree = "<group>"; };
 		6957EBEA1F8B62A3008EFD19 /* PhotosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
 		6957EBEB1F8B62A3008EFD19 /* PhotosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
 		6957EBED1F8B6350008EFD19 /* PhotosViewController+LoadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotosViewController+LoadView.h"; sourceTree = "<group>"; };
@@ -211,6 +214,8 @@
 			children = (
 				6957EBF11F8B652B008EFD19 /* GalleryViewController+LoadView.h */,
 				6957EBF21F8B652B008EFD19 /* GalleryViewController+LoadView.m */,
+				693349C61F8B8A3000CEE1CF /* GalleryContentViewController+LoadView.h */,
+				693349C71F8B8A3000CEE1CF /* GalleryContentViewController+LoadView.m */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -547,6 +552,7 @@
 				698E22111D27B405003CE1C7 /* dataBase.xcdatamodeld in Sources */,
 				6957EBF31F8B652B008EFD19 /* GalleryViewController+LoadView.m in Sources */,
 				5AAE03E11D2A7EC300CC94C5 /* Photo.m in Sources */,
+				693349C81F8B8A3000CEE1CF /* GalleryContentViewController+LoadView.m in Sources */,
 				E4E96EF71D52487600691D66 /* AlbumsViewController.m in Sources */,
 				6984A9711D2CB96600487ED5 /* CustomCollectionViewCell.m in Sources */,
 				6957EBEC1F8B62A3008EFD19 /* PhotosViewController.m in Sources */,

@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+
+/* coredata */
 #import "Photo.h"
 
 @interface GalleryContentViewController : UIViewController
 
+/* data */
 @property (strong, nonatomic) Photo *photoObject;
-
 @property (assign, nonatomic) NSInteger pageIndex;
+
+/* UI */
+@property (strong ,nonatomic) UIImageView *imageView;
 
 @end
