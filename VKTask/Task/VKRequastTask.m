@@ -7,11 +7,15 @@
 //
 
 #import "VKRequastTask.h"
+
+/* coredata */
 #import "User.h"
-#import <VK-ios-sdk/VKSdk.h>
 #import "User.h"
 #import "Photo.h"
 #import "Album.h"
+
+/* framewotks */
+#import <VK-ios-sdk/VKSdk.h>
 #import <AFNetworking.h>
 
 
