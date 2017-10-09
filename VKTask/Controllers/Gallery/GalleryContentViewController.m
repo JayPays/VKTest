@@ -39,19 +39,10 @@
 }
 
 - (void)loadImage {
-    __weak typeof (self) weakSelf = self;
-    SDWebImageManager *manager = [SDWebImageManager sharedManager];
-    [manager downloadImageWithURL:[NSURL URLWithString:self.photoObject.getImageUrlHighResolution]
-                          options:0
-                         progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-                             // progression tracking code
-                         }
-                        completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-                            __strong typeof (weakSelf) strongSelf = weakSelf;
-                            if (image) {
-                                strongSelf.imageView.image = image;
-                            }
-                        }];
+    
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.photoObject.getImageUrlHighResolution] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        
+    }];
 }
 
 - (void)createImageView {
