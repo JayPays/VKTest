@@ -18,7 +18,6 @@
 		5AAE03E11D2A7EC300CC94C5 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE03DD1D2A7EC300CC94C5 /* Photo.m */; };
 		5AAE03E41D2A7EE000CC94C5 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE03E31D2A7EE000CC94C5 /* User+CoreDataProperties.m */; };
 		5ACBA8A31DBF5C9A003D2D12 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ACBA8A21DBF5C9A003D2D12 /* Launch.storyboard */; };
-		5ACBA8B11DBF8F31003D2D12 /* UIFetchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACBA8B01DBF8F31003D2D12 /* UIFetchResultTableViewController.m */; };
 		6957EBEC1F8B62A3008EFD19 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957EBEB1F8B62A3008EFD19 /* PhotosViewController.m */; };
 		6957EBEF1F8B6350008EFD19 /* PhotosViewController+LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957EBEE1F8B6350008EFD19 /* PhotosViewController+LoadView.m */; };
 		6957EBF31F8B652B008EFD19 /* GalleryViewController+LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957EBF21F8B652B008EFD19 /* GalleryViewController+LoadView.m */; };
@@ -72,8 +71,6 @@
 		5AAE03E21D2A7EE000CC94C5 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
 		5AAE03E31D2A7EE000CC94C5 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
 		5ACBA8A21DBF5C9A003D2D12 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
-		5ACBA8AF1DBF8F31003D2D12 /* UIFetchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFetchResultTableViewController.h; sourceTree = "<group>"; };
-		5ACBA8B01DBF8F31003D2D12 /* UIFetchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFetchResultTableViewController.m; sourceTree = "<group>"; };
 		691603CF1D27A84C00F1509B /* VKTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		691603E81D27A84C00F1509B /* VKTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		691603F31D27A84C00F1509B /* VKTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,15 +246,6 @@
 			path = Gallery;
 			sourceTree = "<group>";
 		};
-		695985881F8B5F7300DCBF9E /* FetchResultController */ = {
-			isa = PBXGroup;
-			children = (
-				5ACBA8AF1DBF8F31003D2D12 /* UIFetchResultTableViewController.h */,
-				5ACBA8B01DBF8F31003D2D12 /* UIFetchResultTableViewController.m */,
-			);
-			path = FetchResultController;
-			sourceTree = "<group>";
-		};
 		695985891F8B5F9800DCBF9E /* extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,7 +267,6 @@
 		698E21E11D27A94A003CE1C7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				695985881F8B5F7300DCBF9E /* FetchResultController */,
 				695985871F8B5F6000DCBF9E /* Gallery */,
 				695985861F8B5F5300DCBF9E /* Photos */,
 				E4E96EEE1D52487500691D66 /* Albums */,
@@ -572,7 +559,6 @@
 				5AAE03DE1D2A7EC300CC94C5 /* Album+CoreDataProperties.m in Sources */,
 				5AAE03DF1D2A7EC300CC94C5 /* Album.m in Sources */,
 				6957EBEF1F8B6350008EFD19 /* PhotosViewController+LoadView.m in Sources */,
-				5ACBA8B11DBF8F31003D2D12 /* UIFetchResultTableViewController.m in Sources */,
 				695985851F8B5EAC00DCBF9E /* AlbumsViewController+LoadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
