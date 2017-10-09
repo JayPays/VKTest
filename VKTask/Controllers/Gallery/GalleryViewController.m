@@ -8,67 +8,15 @@
 
 #import "GalleryViewController.h"
 
-/* controllers */
-#import "GalleryContentViewController.h"
-
 @implementation GalleryViewController
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self createCloseButton];
-    
-    GalleryContentViewController *startingViewController = [self viewControllerAtIndex:self.index];
-    NSArray *viewControllers = @[startingViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
 }
 
-
-#pragma mark - Create objects
-
-- (void)createCloseButton {
-    UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [closeButton setFrame:CGRectMake(0, 0, 30, 30)];
-    [closeButton setBackgroundImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
-    [closeButton addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchUpInside];
-    [closeButton setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.view addSubview:closeButton];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:closeButton
-                                                          attribute:NSLayoutAttributeWidth
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeWidth
-                                                         multiplier:0.0
-                                                           constant:35]];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:closeButton
-                                                          attribute:NSLayoutAttributeHeight
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeHeight
-                                                         multiplier:0.0
-                                                           constant:35]];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:closeButton
-                                                          attribute:NSLayoutAttributeLeading
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeLeading
-                                                         multiplier:1.0
-                                                           constant:16]];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:closeButton
-                                                          attribute:NSLayoutAttributeTop
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeTop
-                                                         multiplier:1.0
-                                                           constant:16]];
-}
-
-#pragma mark - Action
+#pragma mark - Actions
 
 - (void)closeAction {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -120,8 +68,6 @@
     Photo *currentPhoto = self.photos[index];
     pageContentViewController.pageIndex = index;
     pageContentViewController.photoObject = currentPhoto;
-
-    
     return pageContentViewController;
 }
 

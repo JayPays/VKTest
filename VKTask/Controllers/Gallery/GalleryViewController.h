@@ -11,6 +11,9 @@
 /* coredata */
 #import "Photo.h"
 
+/* controllers */
+#import "GalleryContentViewController.h"
+
 @interface GalleryViewController : UIViewController
 <
     UIPageViewControllerDataSource,
@@ -23,5 +26,11 @@
 
 /* UI */
 @property (strong, nonatomic) UIPageViewController *pageViewController;
+
+#pragma mark - Actions
+- (void)closeAction;
+
+
+- (GalleryContentViewController *)viewControllerAtIndex:(NSUInteger)index;
 
 @end

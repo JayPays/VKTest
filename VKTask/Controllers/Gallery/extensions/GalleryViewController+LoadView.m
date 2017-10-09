@@ -20,6 +20,9 @@
     
     /* append pageViewController */
     [self loadView_appendPageViewController];
+    
+    /* append close button */
+    [self loadView_appendCloseButton];
 }
 
 #pragma mark - Append pageViewController
@@ -32,6 +35,7 @@
     UIPageViewController *viewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     viewController.dataSource = self;
     viewController.delegate = self;
+    [viewController setViewControllers:@[[self viewControllerAtIndex:self.index]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     UIView *view = viewController.view;
     view.frame = rootRect;
     view.translatesAutoresizingMaskIntoConstraints = NO;
@@ -42,6 +46,24 @@
     
     /* append */
     [self.view addSubview:view];
+}
+
+#pragma mark - Append close button
+
+- (void)loadView_appendCloseButton {
+    
+    UIView *rootView = self.view;
+    
+    /* create */
+    UIButton *view = [UIButton buttonWithType:UIButtonTypeCustom];
+    [view setFrame:CGRectMake(20, 20, 30, 30)];
+    [view setBackgroundImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
+    [view addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchUpInside];
+    view.translatesAutoresizingMaskIntoConstraints = NO;
+    view.autoresizingMask =  UIViewAutoresizingFlexibleLeftMargin;
+    
+    /* append */
+    [rootView addSubview:view];
 }
 
 @end
