@@ -19,7 +19,8 @@
 		5AAE03E41D2A7EE000CC94C5 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE03E31D2A7EE000CC94C5 /* User+CoreDataProperties.m */; };
 		5ACBA8A31DBF5C9A003D2D12 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ACBA8A21DBF5C9A003D2D12 /* Launch.storyboard */; };
 		5ACBA8B11DBF8F31003D2D12 /* UIFetchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACBA8B01DBF8F31003D2D12 /* UIFetchResultTableViewController.m */; };
-		5ACBA8B71DC0ACA2003D2D12 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACBA8B61DC0ACA2003D2D12 /* SettingsViewController.m */; };
+		6957EBEC1F8B62A3008EFD19 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957EBEB1F8B62A3008EFD19 /* PhotosViewController.m */; };
+		695985851F8B5EAC00DCBF9E /* AlbumsViewController+LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 695985841F8B5EAC00DCBF9E /* AlbumsViewController+LoadView.m */; };
 		6984A9711D2CB96600487ED5 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6984A96F1D2CB96600487ED5 /* CustomCollectionViewCell.m */; };
 		6984A9721D2CB96600487ED5 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6984A9701D2CB96600487ED5 /* CustomCollectionViewCell.xib */; };
 		698E21EC1D27A94A003CE1C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E21E01D27A94A003CE1C7 /* AppDelegate.m */; };
@@ -33,7 +34,6 @@
 		E4E96EF71D52487600691D66 /* AlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E96EF01D52487500691D66 /* AlbumsViewController.m */; };
 		E4E96EF81D52487600691D66 /* GalleryContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E96EF21D52487500691D66 /* GalleryContentViewController.m */; };
 		E4E96EF91D52487600691D66 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E96EF41D52487600691D66 /* GalleryViewController.m */; };
-		E4E96EFA1D52487600691D66 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E96EF61D52487600691D66 /* PhotosViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,11 +72,13 @@
 		5ACBA8A21DBF5C9A003D2D12 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		5ACBA8AF1DBF8F31003D2D12 /* UIFetchResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIFetchResultTableViewController.h; sourceTree = "<group>"; };
 		5ACBA8B01DBF8F31003D2D12 /* UIFetchResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIFetchResultTableViewController.m; sourceTree = "<group>"; };
-		5ACBA8B51DC0ACA2003D2D12 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		5ACBA8B61DC0ACA2003D2D12 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		691603CF1D27A84C00F1509B /* VKTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		691603E81D27A84C00F1509B /* VKTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		691603F31D27A84C00F1509B /* VKTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6957EBEA1F8B62A3008EFD19 /* PhotosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
+		6957EBEB1F8B62A3008EFD19 /* PhotosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
+		695985831F8B5EAC00DCBF9E /* AlbumsViewController+LoadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlbumsViewController+LoadView.h"; sourceTree = "<group>"; };
+		695985841F8B5EAC00DCBF9E /* AlbumsViewController+LoadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AlbumsViewController+LoadView.m"; sourceTree = "<group>"; };
 		6984A96E1D2CB96600487ED5 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomCollectionViewCell.h; path = Cells/CustomCollectionViewCell.h; sourceTree = "<group>"; };
 		6984A96F1D2CB96600487ED5 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomCollectionViewCell.m; path = Cells/CustomCollectionViewCell.m; sourceTree = "<group>"; };
 		6984A9701D2CB96600487ED5 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomCollectionViewCell.xib; path = Cells/CustomCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -100,8 +102,6 @@
 		E4E96EF21D52487500691D66 /* GalleryContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryContentViewController.m; sourceTree = "<group>"; };
 		E4E96EF31D52487600691D66 /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
 		E4E96EF41D52487600691D66 /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
-		E4E96EF51D52487600691D66 /* PhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
-		E4E96EF61D52487600691D66 /* PhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
 		F6577E4F24B5BF13D285846B /* libPods-VKTask.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VKTask.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -161,28 +161,12 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
-		5ABBD91D1D2A270200107A9E /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
 		5ACBA8A11DBF5C89003D2D12 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				5ACBA8A21DBF5C9A003D2D12 /* Launch.storyboard */,
 			);
 			name = storyboard;
-			sourceTree = "<group>";
-		};
-		5ACBA8B41DC0AC8E003D2D12 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				5ACBA8B51DC0ACA2003D2D12 /* SettingsViewController.h */,
-				5ACBA8B61DC0ACA2003D2D12 /* SettingsViewController.m */,
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		691603C61D27A84C00F1509B = {
@@ -210,7 +194,6 @@
 			children = (
 				5A51F8D91DC1DF51002B178D /* Managers */,
 				5AAE03861D2A3CA600CC94C5 /* Cells */,
-				5ABBD91D1D2A270200107A9E /* Categories */,
 				698E22691D27CA94003CE1C7 /* Task */,
 				698E220E1D27B3F7003CE1C7 /* dataBase */,
 				698E21DE1D27A94A003CE1C7 /* app */,
@@ -218,6 +201,52 @@
 				698E21E41D27A94A003CE1C7 /* Resources */,
 			);
 			path = VKTask;
+			sourceTree = "<group>";
+		};
+		695985821F8B5E9300DCBF9E /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				695985831F8B5EAC00DCBF9E /* AlbumsViewController+LoadView.h */,
+				695985841F8B5EAC00DCBF9E /* AlbumsViewController+LoadView.m */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		695985861F8B5F5300DCBF9E /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				695985891F8B5F9800DCBF9E /* extensions */,
+				6957EBEA1F8B62A3008EFD19 /* PhotosViewController.h */,
+				6957EBEB1F8B62A3008EFD19 /* PhotosViewController.m */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		695985871F8B5F6000DCBF9E /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				E4E96EF11D52487500691D66 /* GalleryContentViewController.h */,
+				E4E96EF21D52487500691D66 /* GalleryContentViewController.m */,
+				E4E96EF31D52487600691D66 /* GalleryViewController.h */,
+				E4E96EF41D52487600691D66 /* GalleryViewController.m */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		695985881F8B5F7300DCBF9E /* FetchResultController */ = {
+			isa = PBXGroup;
+			children = (
+				5ACBA8AF1DBF8F31003D2D12 /* UIFetchResultTableViewController.h */,
+				5ACBA8B01DBF8F31003D2D12 /* UIFetchResultTableViewController.m */,
+			);
+			path = FetchResultController;
+			sourceTree = "<group>";
+		};
+		695985891F8B5F9800DCBF9E /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		698E21DE1D27A94A003CE1C7 /* app */ = {
@@ -232,10 +261,10 @@
 		698E21E11D27A94A003CE1C7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5ACBA8AF1DBF8F31003D2D12 /* UIFetchResultTableViewController.h */,
-				5ACBA8B01DBF8F31003D2D12 /* UIFetchResultTableViewController.m */,
+				695985881F8B5F7300DCBF9E /* FetchResultController */,
+				695985871F8B5F6000DCBF9E /* Gallery */,
+				695985861F8B5F5300DCBF9E /* Photos */,
 				E4E96EEE1D52487500691D66 /* Albums */,
-				5ACBA8B41DC0AC8E003D2D12 /* Settings */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -303,14 +332,9 @@
 		E4E96EEE1D52487500691D66 /* Albums */ = {
 			isa = PBXGroup;
 			children = (
+				695985821F8B5E9300DCBF9E /* extensions */,
 				E4E96EEF1D52487500691D66 /* AlbumsViewController.h */,
 				E4E96EF01D52487500691D66 /* AlbumsViewController.m */,
-				E4E96EF11D52487500691D66 /* GalleryContentViewController.h */,
-				E4E96EF21D52487500691D66 /* GalleryContentViewController.m */,
-				E4E96EF31D52487600691D66 /* GalleryViewController.h */,
-				E4E96EF41D52487600691D66 /* GalleryViewController.m */,
-				E4E96EF51D52487600691D66 /* PhotosViewController.h */,
-				E4E96EF61D52487600691D66 /* PhotosViewController.m */,
 			);
 			path = Albums;
 			sourceTree = "<group>";
@@ -519,9 +543,8 @@
 				5AAE03E11D2A7EC300CC94C5 /* Photo.m in Sources */,
 				E4E96EF71D52487600691D66 /* AlbumsViewController.m in Sources */,
 				6984A9711D2CB96600487ED5 /* CustomCollectionViewCell.m in Sources */,
+				6957EBEC1F8B62A3008EFD19 /* PhotosViewController.m in Sources */,
 				E4E96EF91D52487600691D66 /* GalleryViewController.m in Sources */,
-				E4E96EFA1D52487600691D66 /* PhotosViewController.m in Sources */,
-				5ACBA8B71DC0ACA2003D2D12 /* SettingsViewController.m in Sources */,
 				698E22031D27AA95003CE1C7 /* main.m in Sources */,
 				5AAE03E01D2A7EC300CC94C5 /* Photo+CoreDataProperties.m in Sources */,
 				698E21EC1D27A94A003CE1C7 /* AppDelegate.m in Sources */,
@@ -530,6 +553,7 @@
 				5AAE03DE1D2A7EC300CC94C5 /* Album+CoreDataProperties.m in Sources */,
 				5AAE03DF1D2A7EC300CC94C5 /* Album.m in Sources */,
 				5ACBA8B11DBF8F31003D2D12 /* UIFetchResultTableViewController.m in Sources */,
+				695985851F8B5EAC00DCBF9E /* AlbumsViewController+LoadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

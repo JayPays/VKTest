@@ -7,15 +7,28 @@
 //
 
 #import "AlbumsViewController.h"
+
+/* frameworks */
 #import <VK-ios-sdk/VKSdk.h>
-#import "VKRequastTask.h"
-#import "User.h"
-#import "CustomTableViewCell.h"
-#import "Album.h"
-#import "AppDelegate.h"
-#import "PhotosViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
+/* network */
+#import "VKRequastTask.h"
+
+/* coreadata */
+#import "User.h"
+#import "Album.h"
+
+/* cells */
+#import "CustomTableViewCell.h"
+
+/* controllers */
+#import "PhotosViewController.h"
+
+/* delegate */
+#import "AppDelegate.h"
+
+/* statics */
 static NSString *idVK = @"5531179";
 
 @interface AlbumsViewController ()
@@ -33,11 +46,6 @@ static NSString *idVK = @"5531179";
 
 @implementation AlbumsViewController
 
-- (void)laodView {
-    UITableView *view = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    view.backgroundColor = [UIColor blackColor];
-    self.view = view;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -143,7 +151,6 @@ static NSString *idVK = @"5531179";
 - (void)vkSdkUserAuthorizationFailed {
     NSLog(@"Failed");
 }
-
 
 #pragma mark - VKSDKUI Delegate
 

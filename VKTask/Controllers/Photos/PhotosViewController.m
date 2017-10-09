@@ -7,15 +7,23 @@
 //
 
 #import "PhotosViewController.h"
+
+/* cells */
 #import "CustomCollectionViewCell.h"
+
+/* coredata */
 #import "Photo.h"
+
+/* frameworks */
 #import <SDWebImage/UIImageView+WebCache.h>
+
+/* controllers */
 #import "GalleryViewController.h"
 
 @interface PhotosViewController ()
 <
-    UICollectionViewDelegate,
-    UICollectionViewDataSource
+UICollectionViewDelegate,
+UICollectionViewDataSource
 >
 
 @property (strong,nonatomic) NSArray <Photo *> *photos;
@@ -100,3 +108,4 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 @end
+
