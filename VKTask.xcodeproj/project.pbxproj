@@ -21,6 +21,7 @@
 		5ACBA8B11DBF8F31003D2D12 /* UIFetchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACBA8B01DBF8F31003D2D12 /* UIFetchResultTableViewController.m */; };
 		6957EBEC1F8B62A3008EFD19 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957EBEB1F8B62A3008EFD19 /* PhotosViewController.m */; };
 		6957EBEF1F8B6350008EFD19 /* PhotosViewController+LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957EBEE1F8B6350008EFD19 /* PhotosViewController+LoadView.m */; };
+		6957EBF31F8B652B008EFD19 /* GalleryViewController+LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6957EBF21F8B652B008EFD19 /* GalleryViewController+LoadView.m */; };
 		695985851F8B5EAC00DCBF9E /* AlbumsViewController+LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 695985841F8B5EAC00DCBF9E /* AlbumsViewController+LoadView.m */; };
 		6984A9711D2CB96600487ED5 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6984A96F1D2CB96600487ED5 /* CustomCollectionViewCell.m */; };
 		6984A9721D2CB96600487ED5 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6984A9701D2CB96600487ED5 /* CustomCollectionViewCell.xib */; };
@@ -80,6 +81,8 @@
 		6957EBEB1F8B62A3008EFD19 /* PhotosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
 		6957EBED1F8B6350008EFD19 /* PhotosViewController+LoadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhotosViewController+LoadView.h"; sourceTree = "<group>"; };
 		6957EBEE1F8B6350008EFD19 /* PhotosViewController+LoadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PhotosViewController+LoadView.m"; sourceTree = "<group>"; };
+		6957EBF11F8B652B008EFD19 /* GalleryViewController+LoadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GalleryViewController+LoadView.h"; sourceTree = "<group>"; };
+		6957EBF21F8B652B008EFD19 /* GalleryViewController+LoadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GalleryViewController+LoadView.m"; sourceTree = "<group>"; };
 		695985831F8B5EAC00DCBF9E /* AlbumsViewController+LoadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlbumsViewController+LoadView.h"; sourceTree = "<group>"; };
 		695985841F8B5EAC00DCBF9E /* AlbumsViewController+LoadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AlbumsViewController+LoadView.m"; sourceTree = "<group>"; };
 		6984A96E1D2CB96600487ED5 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomCollectionViewCell.h; path = Cells/CustomCollectionViewCell.h; sourceTree = "<group>"; };
@@ -206,6 +209,15 @@
 			path = VKTask;
 			sourceTree = "<group>";
 		};
+		6957EBF01F8B64DC008EFD19 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6957EBF11F8B652B008EFD19 /* GalleryViewController+LoadView.h */,
+				6957EBF21F8B652B008EFD19 /* GalleryViewController+LoadView.m */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		695985821F8B5E9300DCBF9E /* extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +240,7 @@
 		695985871F8B5F6000DCBF9E /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				6957EBF01F8B64DC008EFD19 /* extensions */,
 				E4E96EF11D52487500691D66 /* GalleryContentViewController.h */,
 				E4E96EF21D52487500691D66 /* GalleryContentViewController.m */,
 				E4E96EF31D52487600691D66 /* GalleryViewController.h */,
@@ -545,6 +558,7 @@
 				698E22211D27B53C003CE1C7 /* User.m in Sources */,
 				5AAE03B31D2A7CAD00CC94C5 /* CustomTableViewCell.m in Sources */,
 				698E22111D27B405003CE1C7 /* dataBase.xcdatamodeld in Sources */,
+				6957EBF31F8B652B008EFD19 /* GalleryViewController+LoadView.m in Sources */,
 				5AAE03E11D2A7EC300CC94C5 /* Photo.m in Sources */,
 				E4E96EF71D52487600691D66 /* AlbumsViewController.m in Sources */,
 				6984A9711D2CB96600487ED5 /* CustomCollectionViewCell.m in Sources */,

@@ -7,33 +7,18 @@
 //
 
 #import "GalleryViewController.h"
+
+/* controllers */
 #import "GalleryContentViewController.h"
-
-@interface GalleryViewController ()
-<
-    UIPageViewControllerDataSource,
-    UIPageViewControllerDelegate
->
-
-@property (strong, nonatomic) UIPageViewController *pageViewController;
-
-@end
 
 @implementation GalleryViewController
 
-- (void)loadView {
-    UIView *view = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    view.backgroundColor = [UIColor blackColor];
-    self.view = view;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self createPageViewController];
+    
     [self createCloseButton];
     
-    self.pageViewController.dataSource = self;
-    self.pageViewController.delegate = self;
     GalleryContentViewController *startingViewController = [self viewControllerAtIndex:self.index];
     NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
@@ -82,46 +67,6 @@
                                                          multiplier:1.0
                                                            constant:16]];
 }
-
-- (void)createPageViewController {
-    UIPageViewController *pvc = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    self.pageViewController = pvc;
-    [self.view addSubview:pvc.view];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:pvc.view
-                                                          attribute:NSLayoutAttributeTrailing
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeTrailing
-                                                         multiplier:1.0
-                                                           constant:0]];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:pvc.view
-                                                          attribute:NSLayoutAttributeBottom
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeBottom
-                                                         multiplier:1.0
-                                                           constant:0]];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:pvc.view
-                                                          attribute:NSLayoutAttributeLeading
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeLeading
-                                                         multiplier:1.0
-                                                           constant:0]];
-    
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:pvc.view
-                                                          attribute:NSLayoutAttributeTop
-                                                          relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.view
-                                                          attribute:NSLayoutAttributeTop
-                                                         multiplier:1.0
-                                                           constant:0]];
-    
-}
-
 
 #pragma mark - Action
 

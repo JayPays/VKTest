@@ -7,12 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+
+/* coredata */
 #import "Photo.h"
 
 @interface GalleryViewController : UIViewController
+<
+    UIPageViewControllerDataSource,
+    UIPageViewControllerDelegate
+>
 
+/* data */
 @property (assign, nonatomic) NSInteger index;
-
 @property (strong,nonatomic) NSArray <Photo *> *photos;
+
+/* UI */
+@property (strong, nonatomic) UIPageViewController *pageViewController;
 
 @end
