@@ -180,12 +180,9 @@
     return pageContentViewController;
 }
 
-#pragma mark - StatusBar 
+#pragma mark - Status bar
 
-- (BOOL)hideStatusBar {
+- (BOOL)prefersStatusBarHidden {
     return YES;
 }
-
-    
-
 @end

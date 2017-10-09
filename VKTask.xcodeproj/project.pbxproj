@@ -29,7 +29,6 @@
 		698E22211D27B53C003CE1C7 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E22171D27B53C003CE1C7 /* User.m */; };
 		698E226C1D27CAA8003CE1C7 /* VKRequastTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 698E226B1D27CAA8003CE1C7 /* VKRequastTask.m */; };
 		69C4D8A01D2CAF3C002CE66A /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 69C4D89F1D2CAF3C002CE66A /* close.png */; };
-		69C4D8A61D2CB80F002CE66A /* UIViewController+StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C4D8A51D2CB80F002CE66A /* UIViewController+StatusBar.m */; };
 		BF924BA08C62C39964C72FB7 /* libPods-VKTask.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6577E4F24B5BF13D285846B /* libPods-VKTask.a */; };
 		E4E96EF71D52487600691D66 /* AlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E96EF01D52487500691D66 /* AlbumsViewController.m */; };
 		E4E96EF81D52487600691D66 /* GalleryContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E96EF21D52487500691D66 /* GalleryContentViewController.m */; };
@@ -93,8 +92,6 @@
 		698E226A1D27CAA8003CE1C7 /* VKRequastTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKRequastTask.h; sourceTree = "<group>"; };
 		698E226B1D27CAA8003CE1C7 /* VKRequastTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKRequastTask.m; sourceTree = "<group>"; };
 		69C4D89F1D2CAF3C002CE66A /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
-		69C4D8A41D2CB80F002CE66A /* UIViewController+StatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+StatusBar.h"; sourceTree = "<group>"; };
-		69C4D8A51D2CB80F002CE66A /* UIViewController+StatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+StatusBar.m"; sourceTree = "<group>"; };
 		B550DD32116A5D10DDBBB405 /* Pods-VKTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKTask/Pods-VKTask.release.xcconfig"; sourceTree = "<group>"; };
 		C2967B29F80BE954876CA715 /* Pods-VKTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKTask/Pods-VKTask.debug.xcconfig"; sourceTree = "<group>"; };
 		E4E96EEF1D52487500691D66 /* AlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumsViewController.h; sourceTree = "<group>"; };
@@ -167,8 +164,6 @@
 		5ABBD91D1D2A270200107A9E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				69C4D8A41D2CB80F002CE66A /* UIViewController+StatusBar.h */,
-				69C4D8A51D2CB80F002CE66A /* UIViewController+StatusBar.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -480,13 +475,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VKTask-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F2AAAD74B0E51C1FDEED612B /* [CP] Copy Pods Resources */ = {
@@ -495,9 +493,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VKTask/Pods-VKTask-resources.sh",
+				"$PODS_CONFIGURATION_BUILD_DIR/VK-ios-sdk/VKSdkResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -522,7 +523,6 @@
 				E4E96EFA1D52487600691D66 /* PhotosViewController.m in Sources */,
 				5ACBA8B71DC0ACA2003D2D12 /* SettingsViewController.m in Sources */,
 				698E22031D27AA95003CE1C7 /* main.m in Sources */,
-				69C4D8A61D2CB80F002CE66A /* UIViewController+StatusBar.m in Sources */,
 				5AAE03E01D2A7EC300CC94C5 /* Photo+CoreDataProperties.m in Sources */,
 				698E21EC1D27A94A003CE1C7 /* AppDelegate.m in Sources */,
 				698E226C1D27CAA8003CE1C7 /* VKRequastTask.m in Sources */,
